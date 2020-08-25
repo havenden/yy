@@ -1,0 +1,102 @@
+.layout-navbar-fixed .wrapper .main-sidebar:hover .brand-link {
+    transition: width 0.3s ease-in-out;
+    width: 200px;
+}
+
+.layout-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+.layout-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+
+.layout-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+.layout-sm-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.layout-sm-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+.layout-md-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.layout-md-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+.layout-lg-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.layout-lg-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+.layout-xl-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.layout-xl-navbar-fixed .wrapper .brand-link {
+    width: 200px;
+}
+@media (min-width: 768px) {
+    body:not(.sidebar-mini-md) .content-wrapper,
+    body:not(.sidebar-mini-md) .main-footer,
+    body:not(.sidebar-mini-md) .main-header {
+        margin-left: 200px;
+    }
+}
+@media (min-width: 768px) {
+    .sidebar-mini-md .content-wrapper,
+    .sidebar-mini-md .main-footer,
+    .sidebar-mini-md .main-header {
+        margin-left: 200px;
+    }
+}
+.main-sidebar, .main-sidebar::before {
+    width: 200px;
+}
+.sidebar-collapse .main-sidebar, .sidebar-collapse .main-sidebar::before {
+    margin-left: -200px;
+}
+@media (max-width: 767.98px) {
+    .main-sidebar, .main-sidebar::before {
+        margin-left: -200px;
+    }
+}
+.layout-fixed .brand-link {
+    width: 200px;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar:hover, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused {
+    width: 200px;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar:hover .brand-link, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .brand-link {
+    width: 200px;
+}
+.sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.sidebar-mini-md.sidebar-collapse .main-sidebar:hover, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused {
+    width: 200px;
+}
+.sidebar-mini-md.sidebar-collapse .main-sidebar:hover .brand-link, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .brand-link {
+    width: 200px;
+}
+.sidebar-mini-md.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+    width: 200px;
+}
+.control-sidebar, .control-sidebar::before {
+    bottom: calc(3.5rem + 1px);
+    display: none;
+    right: -200px;
+    width: 200px;
+    transition: right 0.3s ease-in-out, display 0.3s ease-in-out;
+}
+.control-sidebar-open.control-sidebar-push .content-wrapper,
+.control-sidebar-open.control-sidebar-push .main-footer, .control-sidebar-open.control-sidebar-push-slide .content-wrapper,
+.control-sidebar-open.control-sidebar-push-slide .main-footer {
+    margin-right: 200px;
+}
+.control-sidebar-slide-open.control-sidebar-push .content-wrapper,
+.control-sidebar-slide-open.control-sidebar-push .main-footer, .control-sidebar-slide-open.control-sidebar-push-slide .content-wrapper,
+.control-sidebar-slide-open.control-sidebar-push-slide .main-footer {
+    margin-right: 200px;
+}
