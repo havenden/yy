@@ -120,4 +120,23 @@ class PermController extends Controller
         }
         abort(401);
     }
+    public function search(Request $request)
+    {
+        if (Auth::user()->id===1||Auth::user()->hasPermissionTo('permissions_read')) {
+            $key = $request->input('key');
+            if (!empty($key)) {
+                return view('permission.index', [
+                    'key' => $key,
+                    'permissions' => Permission::select('id','name', 'display_name')
+                        ->where('name', 'like', '%' . $key . '%')
+                        ->orWhere('display_name', 'like', '%' . $key . '%')
+                        ->orderBy('id','desc')
+                        ->paginate(12)
+                ]);
+            }else {
+                return redirect()->route('permission.index');
+            }
+        }
+        abort(403);
+    }
 }

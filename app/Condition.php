@@ -12,7 +12,7 @@ class Condition extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'display_name'
+        'id','name', 'display_name'
     ];
 
     public static function createCondition(Http\Requests\storeConditionRequest $request)

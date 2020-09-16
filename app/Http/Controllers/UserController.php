@@ -25,7 +25,7 @@ class UserController extends Controller
         if(Auth::user()->id==1||Auth::user()->hasPermissionTo('users_read')){
             return view('user.index',
                 [
-                    'users' => User::select('id','name', 'display_name','status','tell')->paginate(18),
+                    'users' => User::select('id','name', 'display_name','is_active','tell')->paginate(18),
                 ]
             );
         }
@@ -135,7 +135,7 @@ class UserController extends Controller
             if (!empty($key)) {
                 return view('user.index', [
                     'key' => $key,
-                    'users' => User::select('id','name', 'display_name','status','tell')
+                    'users' => User::select('id','name', 'display_name','is_active','tell')
                         ->where('name', 'like', '%' . $key . '%')
                         ->orWhere('display_name', 'like', '%' . $key . '%')
                         ->orderBy('id','desc')
@@ -167,16 +167,16 @@ class UserController extends Controller
             $endTime=empty($endTime)?Carbon::now()->endOfDay()->toDateTimeString():Carbon::createFromFormat('Y-m-d',$endTime)->endOfDay()->toDateTimeString();
 //            dd($startTime.'-----------'.$endTime);
             $yy=Member::select('uid',DB::raw('count(*) as count'))->where([
-                ['pubdate', '>=', $startTime],
-                ['pubdate', '<=', $endTime],
+                ['order_date', '>=', $startTime],
+                ['order_date', '<=', $endTime],
             ])->groupBy('uid')->orderBy('count','desc')->limit(10)->get()->toArray();
             $arrive=Member::select('uid',DB::raw('count(*) as count'))->where([
-                ['okdate', '>=', $startTime],
-                ['okdate', '<=', $endTime],
+                ['ok_date', '>=', $startTime],
+                ['ok_date', '<=', $endTime],
             ])->groupBy('uid')->orderBy('count','desc')->limit(10)->get()->toArray();
             $lost=Member::select('uid',DB::raw('count(*) as count'))->where('condition','!=',1)->where([
-                ['pubdate', '>=', $startTime],
-                ['pubdate', '<=', $endTime],
+                ['order_date', '>=', $startTime],
+                ['order_date', '<=', $endTime],
             ])->groupBy('uid')->orderBy('count','desc')->limit(10)->get()->toArray();
             $data['yy']=$yy;
             $data['arrive']=$arrive;

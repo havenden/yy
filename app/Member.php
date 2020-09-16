@@ -12,7 +12,7 @@ class Member extends Model
 {
 
     protected $fillable =[
-        'hid','grade','age','consult','sex','channel','name','wechat','qq','yy_num','disease','writer','area','tell_num','pubdate','condition','edit_log','change_log','created_at','updated_at'
+        'hid','grade','age','consult','sex','channel','name','wechat','qq','yy_num','disease','writer','area','tell_num','order_date','condition','edit_log','change_log','created_at','updated_at'
     ];
     protected $table = 'members';
     public function __construct(array $attributes = [])
@@ -36,9 +36,9 @@ class Member extends Model
         $member=new Member();
         $member->name=$request->input('name');
         $member->uid=Auth::user()->id;
-        $member->tell=$request->input('tell');
-        if (!empty($request->input('pubdate'))){
-            $member->pubdate=Carbon::createFromFormat('Y-m-d H:i',$request->input('pubdate') )->toDateTimeString();
+        $member->tel=$request->input('tel');
+        if (!empty($request->input('order_date'))){
+            $member->order_date=Carbon::createFromFormat('Y-m-d H:i',$request->input('order_date') )->toDateTimeString();
         }
         $member->hid=$request->input('hospital');
         $member->grade=$request->input('grade');
@@ -58,8 +58,8 @@ class Member extends Model
         $member->area=$request->input('area');
         $member->url=$request->input('url');
         $member->keywords=$request->input('keywords');
-        if (!empty($request->input('okdate'))){
-            $member->okdate=Carbon::createFromFormat('Y-m-d H:i',$request->input('okdate') )->toDateTimeString();
+        if (!empty($request->input('ok_date'))){
+            $member->okdate=Carbon::createFromFormat('Y-m-d H:i',$request->input('ok_date') )->toDateTimeString();
         }
 
 
@@ -79,10 +79,10 @@ class Member extends Model
         $member=Member::findOrFail($id);
         $member->name=$request->input('name');
         $member->tell=$request->input('tell');
-        if (!empty($request->input('pubdate'))){
-            $oldpubdate=$member->pubdate;
-            if (Carbon::create($oldpubdate)->format('Y-m-d H:i')!=$request->input('pubdate')){
-                $member->pubdate=Carbon::create($request->input('pubdate') )->toDateTimeString();
+        if (!empty($request->input('order_date'))){
+            $oldorderdate=$member->order_date;
+            if (Carbon::create($oldorderdate)->format('Y-m-d H:i')!=$request->input('order_date')){
+                $member->order_date=Carbon::create($request->input('order_date') )->toDateTimeString();
                 $member->change_log.=$user->display_name.'于'.Carbon::now()->toDateTimeString().'更新了预约时间<br/>';
             }
         }
@@ -104,10 +104,10 @@ class Member extends Model
         $member->area=$request->input('area');
         $member->url=$request->input('url');
         $member->keywords=$request->input('keywords');
-        if (!empty($request->input('okdate'))){
-            $oldokdate=$member->okdate;
-            if (Carbon::create($oldokdate)->format('Y-m-d H:i')!=$request->input('pubdate')){
-                $member->okdate=Carbon::create($request->input('okdate') )->toDateTimeString();
+        if (!empty($request->input('ok_date'))){
+            $oldokdate=$member->ok_date;
+            if (Carbon::create($oldokdate)->format('Y-m-d H:i')!=$request->input('order_date')){
+                $member->ok_date=Carbon::create($request->input('ok_date') )->toDateTimeString();
                 $member->condition=1;
                 $member->change_log.=$user->display_name.'于'.Carbon::now()->toDateTimeString().'更新了到诊时间<br/>';
             }

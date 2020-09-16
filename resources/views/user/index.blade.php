@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">用户表 <span class="text-muted">（{{ $users->count() }}）</span> @can('users_create')<a href="{{ route('user.create') }}" style="margin-left: 10px;">添加</a>@endcan</h3>
+            <h3 class="card-title">用户表 <span class="text-muted">（{{ isset($users)?$users->count():'' }}）</span> @can('users_create')<a href="{{ route('user.create') }}" style="margin-left: 10px;">添加</a>@endcan</h3>
             <div class="card-tools">
                 <form action="{{ route('user.search') }}" method="get" id="search-form">
                     {{csrf_field()}}
@@ -22,11 +22,11 @@
                 {{method_field('DELETE')}}
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="{{ isset($key)?$key:'' }}">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-hover">
                 <thead>
-                <tr>
+                <tr class="text-center">
                     <th style="">用户（ID）</th>
-                    <th style="">昵称</th>
+                    <th style="">姓名</th>
                     <th style="">所属组</th>
                     <th style="">账户状态</th>
                     <th>操作</th>
@@ -35,7 +35,7 @@
                 <tbody>
                 @if(!empty($users))
                 @foreach($users as $user)
-                <tr>
+                <tr class="text-center">
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->display_name }}</td>
                     <td>
@@ -43,17 +43,17 @@
                         <span class="badge bg-primary">{{ $role->display_name }}</span>
                         @endforeach
                     </td>
-                    @if($user->status==1)
+                    @if($user->is_active==1)
                         <td><span class="badge bg-success">正常</span></td>
                     @else
                         <span class="badge bg-danger">异常</span>
                     @endif
                     <td data-id="{{ $user->id }}">
                         @can('users_update')
-                        <a href="{{ route('user.edit',$user->id) }}" style="margin-right: 20px;" title="编辑" data-toggle="tooltip" data-placement="top"><i class="fas fa-edit"></i></a>
+                        <a href="{{ route('user.edit',$user->id) }}" style="margin-right: 10px;" title="编辑" data-toggle="tooltip" data-placement="top" class="font-weight-bold"><i class="fas fa-edit"></i></a>
                         @endcan
                         @can('users_delete')
-                        <a href="javascript:void(0);" data-id="{{$user->id}}"  alt="删除" title="删除" class="delete-operation"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" data-id="{{$user->id}}"  alt="删除" title="删除" class="delete-operation font-weight-bold"><i class="fas fa-trash-alt"></i></a>
                         @endcan
                     </td>
                 </tr>

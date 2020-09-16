@@ -5,6 +5,17 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">权限名 <span class="text-muted">（{{ $permissions->count() }}）</span> @can('permissions_create')<a href="{{ route('permission.create') }}" style="margin-left: 10px;">添加</a>@endcan</h3>
+            <div class="card-tools">
+                <form action="{{ route('permission.search') }}" method="get" id="search-form">
+                    {{csrf_field()}}
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="key" class="form-control float-right" placeholder="Search">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body table-responsive">
@@ -12,7 +23,7 @@
                 {{method_field('DELETE')}}
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="{{ isset($key)?$key:'' }}">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
                     <th style="">权限</th>

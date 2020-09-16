@@ -17,9 +17,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
+            $table->string('email')->nullable();
             $table->string('display_name')->nullable();
-            $table->string('short')->nullable()->comment('编号');
-            $table->integer('status')->default(1);
+            $table->integer('is_active')->default(1);
             $table->string('tell')->nullable();
             $table->integer('hid')->nullable()->comment('默认项目id');
             $table->string('password');
@@ -28,29 +28,40 @@ class CreateUsersTable extends Migration
         //患者表
         Schema::create('members', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->smallInteger('hid')->comment('项目');
             $table->smallInteger('grade')->comment('班次');
             $table->integer('age')->nullable();
             $table->integer('consult')->comment('咨询方式');
             $table->string('sex')->nullable();
             $table->string('channel')->nullable()->comment('来源');
             $table->string('name');
+            $table->string('tel')->nullable()->comment('电话');
+            $table->string('tel2')->nullable()->comment('电话2');
             $table->string('wechat')->nullable();
             $table->string('qq')->nullable();
-            $table->string('yy_num')->nullable();
-            $table->string('disease')->nullable();
+            $table->string('yy_num')->nullable()->comment('预约号');
+            $table->string('zj_num')->nullable()->comment('专家号');
+            $table->string('jz_num')->nullable()->comment('就诊号');
+            $table->integer('depart_id')->nullable()->comment('科室');
+            $table->integer('disease_id')->nullable();
             $table->string('area')->nullable();
             $table->integer('tell_num')->default(0)->comment('回访次数');
-            $table->timestamp('pubdate')->nullable()->comment('预约时间');
-            $table->timestamp('okdate')->nullable()->comment('到诊时间');
+            $table->timestamp('hf_date')->nullable()->comment('下次回访时间');
+            $table->timestamp('order_date')->nullable()->comment('预约时间');
+            $table->integer('order_date_change_num')->default(0)->comment('预约时间修改次数');
+            $table->text('order_date_change_log')->nullable()->comment('预约时间修改记录');
+            $table->timestamp('ok_date')->nullable()->comment('到诊时间');
+            $table->integer('ok_date_change_num')->default(0)->comment('到诊时间修改次数');
+            $table->text('ok_date_change_log')->nullable()->comment('到诊时间修改记录');
             $table->integer('uid')->comment('客服id');
+            $table->string('uname')->comment('客服');
             $table->string('keywords')->nullable()->comment('关键词');
             $table->smallInteger('condition')->comment('状态');
             $table->integer('doctor')->nullable()->comment('专家');
-            $table->string('tell')->nullable()->comment('电话');
-            $table->text('description')->nullable()->comment('描述');
+            $table->text('description')->nullable()->comment('患者描述');
             $table->text('url')->nullable()->comment('链接');
             $table->smallInteger('cfz')->nullable()->comment('初复诊');
+            $table->string('receptionist')->nullable()->comment('接待人');
+            $table->text('reception')->nullable()->comment('接待内容');
             $table->text('edit_log')->nullable();
             $table->text('change_log')->nullable();
             $table->timestamps();
@@ -67,7 +78,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('display_name');
-            $table->integer('status')->default(1);//1显示，2隐藏
+            $table->string('description')->nullable();
             $table->timestamps();
         });
         //项目
@@ -75,6 +86,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('display_name');
+            $table->string('description')->nullable();
             $table->integer('status')->default(1);//1显示，2隐藏
             $table->timestamps();
         });
@@ -90,6 +102,7 @@ class CreateUsersTable extends Migration
             $table->integer('hid');
             $table->string('name')->unique();
             $table->string('display_name');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
         //状态
@@ -97,6 +110,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('display_name');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
         //回访表
@@ -105,23 +119,7 @@ class CreateUsersTable extends Migration
             $table->integer('uid')->comment('客服id');
             $table->integer('mid')->comment('患者id');
             $table->text('content')->nullable();
-            $table->integer('track_type')->comment('回访类型');
-            $table->timestamps();
-        });
-        //转化表
-        Schema::create('trans', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('uid')->comment('客服id');
-            $table->string('name')->comment('客服');
-            $table->integer('chatnum')->comment('对话量');
-            $table->integer('chatnum_active')->comment('有效对话量');
-            $table->integer('msg')->comment('信息获取量');
-            $table->float('msg_rate')->comment('信息获取率');
-            $table->integer('arrive')->comment('总到诊');
-            $table->float('backend_trans')->comment('后端转化率');
-            $table->float('arrive_rate')->comment('总到诊率');
-            $table->float('arrive_rate_active')->comment('有效到诊率');
-            $table->timestamp('mdate')->comment('日期');
+            $table->integer('track_type')->nullable()->comment('回访类型');
             $table->timestamps();
         });
         //医生表
@@ -137,6 +135,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('display_name');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
         //咨询方式表
@@ -182,7 +181,6 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('diseases');
         Schema::dropIfExists('conditions');
         Schema::dropIfExists('tracks');
-        Schema::dropIfExists('trans');
         Schema::dropIfExists('doctors');
         Schema::dropIfExists('consults');
         Schema::dropIfExists('ghs');

@@ -10,7 +10,7 @@
         <table class="table table-sm table-bordered table-striped table-center w-100">
             <thead>
             <tr class="text-center">
-                <th scope="col" class="align-middle">所有({{ $counts['all']['add'] }})</th>
+                <th scope="col" class="align-middle">所有({{ isset($counts['all']['add'])?$counts['all']['add']:'' }})</th>
                 <th scope="col" class="align-middle">今天</th>
                 <th scope="col" class="align-middle">昨天</th>
                 <th scope="col" class="align-middle">本周</th>
@@ -234,8 +234,8 @@
                 <div class="mt-1 table-responsive">
                     <table class="table m-0 table-bordered">
                         <tr class="text-left">
-                            <td>上月环比: <span class="{{ ($counts['thismonth']['arrive']-$counts['lastmonth']['arrive'])>0?'text-info':'text-danger' }}">{{ $counts['thismonth']['arrive']-$counts['lastmonth']['arrive'] }}</span>&nbsp;&nbsp;&nbsp;本月实到率: {{ $counts['thismonth']['arrive_rate'] }}</td>
-                            <td>明日应到：<a href="{{ route('member.search',['model'=>'modal','pubdate_start'=>\Carbon\Carbon::tomorrow()->startOfDay()->toDateString(),'pubdate_end'=>\Carbon\Carbon::tomorrow()->endOfDay()->toDateString()]) }}" class="text-info">{{ $counts['tomorrow']['should_arrive'] }}</a></td>
+{{--                            <td>上月环比: <span class="{{ isset($counts['thismonth'])?(($counts['thismonth']['arrive']-$counts['lastmonth']['arrive'])>0?'text-info':'text-danger'):'' }}">{{ isset($counts['thismonth'])?$counts['thismonth']['arrive']-$counts['lastmonth']['arrive']:'' }}</span>&nbsp;&nbsp;&nbsp;本月实到率: {{ $counts['thismonth']['arrive_rate'] }}</td>--}}
+{{--                            <td>明日应到：<a href="{{ route('member.search',['model'=>'modal','pubdate_start'=>\Carbon\Carbon::tomorrow()->startOfDay()->toDateString(),'pubdate_end'=>\Carbon\Carbon::tomorrow()->endOfDay()->toDateString()]) }}" class="text-info">{{ $counts['tomorrow']['should_arrive'] }}</a></td>--}}
                         </tr>
                     </table>
                 </div>

@@ -49,8 +49,9 @@ class User extends Authenticatable
         $user->name=$request->input('name');
         $user->display_name=$request->input('display_name');
         $user->tell=$request->input('tell');
+        $user->email=$request->input('email');
         $user->password=Hash::make($request->input('password'));
-        $user->status=$request->input('status');
+        $user->is_active=$request->input('is_active');
         $user->save();
         $user->hospitals()->sync($request->input('hospitals'));
         $user->syncRoles($request->input('roles'));
@@ -67,7 +68,8 @@ class User extends Authenticatable
         $user=User::findOrFail($id);
         $user->display_name=$request->input('display_name');
         $user->tell=$request->input('tell');
-        $user->status=$request->input('status');
+        $user->email=$request->input('email');
+        $user->is_active=$request->input('is_active');
         if (!empty($request->password)){
             $user->password=Hash::make($request->input('password'));
         }

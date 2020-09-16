@@ -25,6 +25,13 @@ Route::middleware(['auth'])->group(function () {
         Route::get('user-search','UserController@search')->name('user.search');
         Route::resource('role','RoleController');
         Route::resource('permission','PermController');
+        Route::get('permission-search','PermController@search')->name('permission.search');
+    });
+    Route::prefix('data')->group(function () {
+        Route::resource('swt','SwtController');
+        Route::get('swt-search','SwtController@search')->name('swt.search');
+        Route::get('swt-list','SwtController@list')->name('swt.list');
+        Route::post('swt-import','SwtController@import')->name('swt.import');
     });
     Route::prefix('config')->group(function () {
         Route::resource('hospital','HospitalController');
@@ -40,16 +47,18 @@ Route::middleware(['auth'])->group(function () {
     Route::post('member-condition','MemberController@condition')->name('member.condition');
     Route::resource('track','TrackController');
     Route::get('track-search','TrackController@search')->name('track.search');
-    Route::prefix('help')->group(function () {
-        Route::get('update-member', 'AidenController@updateMember')->name('help.memberupdate');
-        Route::get('update-track', 'AidenController@updateTrack')->name('help.trackupdate');
-        Route::get('update-gh', 'AidenController@updateGh')->name('help.ghupdate');
-    });
+//    Route::prefix('help')->group(function () {
+////        Route::get('update-member', 'AidenController@updateMember')->name('help.memberupdate');
+////        Route::get('update-track', 'AidenController@updateTrack')->name('help.trackupdate');
+////        Route::get('update-gh', 'AidenController@updateGh')->name('help.ghupdate');
+////    });
 
     Route::post('get-tracks-from-member','MemberController@getTracks');
     Route::post('get-info-from-member','MemberController@getInfos');
+    Route::post('get-info-from-swt','SwtController@getInfos');
     Route::post('get-tracks-number','TrackController@getTrackNumber');
     Route::any('ranking','UserController@ranking')->name('user.ranking');
 
     Route::resource('gh','GhController');
+    Route::resource('import','ImportController');
 });

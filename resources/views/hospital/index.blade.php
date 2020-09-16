@@ -12,7 +12,7 @@
                 {{method_field('DELETE')}}
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="{{ isset($key)?$key:'' }}">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
                     <th style="">Name</th>

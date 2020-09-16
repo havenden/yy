@@ -75,6 +75,19 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        'guaqyz' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST_G', '127.0.0.1'),
+            'port' => env('DB_PORT_G', '3306'),
+            'database' => env('DB_DATABASE_G', 'forge'),
+            'username' => env('DB_USERNAME_G', 'forge'),
+            'password' => env('DB_PASSWORD_G', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
 
         'pgsql' => [
             'driver' => 'pgsql',

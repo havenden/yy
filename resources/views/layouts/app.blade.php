@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>{{ config('app.name', 'Laravel') }}</title>
     @yield('css')
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free-5.14.0/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/nav.css') }}">
@@ -182,7 +182,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
-            <div class="container-fluid">
+            @yield('content-header')
+{{--            <div class="container-fluid">--}}
 {{--                <div class="row mb-0">--}}
 {{--                    <div class="col-sm-6">--}}
 {{--                        <h5 class="m-0 text-dark">Starter Page</h5>--}}
@@ -194,7 +195,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 {{--                        </ol>--}}
 {{--                    </div><!-- /.col -->--}}
 {{--                </div><!-- /.row -->--}}
-            </div><!-- /.container-fluid -->
+{{--            </div><!-- /.container-fluid -->--}}
         </div>
         <!-- /.content-header -->
 
@@ -269,8 +270,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             }
         });
     }
-    updateTrackingNum();
-    setInterval("updateTrackingNum()",10000);
+    // updateTrackingNum();
+    // setInterval("updateTrackingNum()",10000);
 </script>
 @yield('javascripts')
 </body>

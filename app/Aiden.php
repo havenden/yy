@@ -53,7 +53,11 @@ class Aiden extends Model
 
     public static function getAllHospitalsArray()
     {
-        return Hospital::pluck('display_name','id');
+        $key='all_hospital_array';
+        $id = Cache::remember($key, config('session.lifetime'), function(){
+            return Hospital::pluck('display_name','id');
+        });
+
     }
 
     public static function getAllConsultsArray()
@@ -73,7 +77,7 @@ class Aiden extends Model
 
     public static function getAllActiveUsersArray()
     {
-        return User::where('status','1')->pluck('display_name','id');
+        return User::where('is_active','1')->pluck('display_name','id');
     }
 
     public static function getAllDiseasesArray()
