@@ -33,6 +33,7 @@ class Hospital extends Model
         TableHandle::copyTableStructure('addons','addons_'.$hospital->id);
         TableHandle::copyTableStructure('tracks','tracks_'.$hospital->id);
         TableHandle::copyTableStructure('ghs','ghs_'.$hospital->id);
+        TableHandle::copyTableStructure('swts','swts_'.$hospital->id);
         //关联到超级管理员
         $admin=User::findOrFail(1);
         $admin->hospitals()->attach($hospital);

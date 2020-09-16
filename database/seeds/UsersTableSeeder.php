@@ -45,6 +45,7 @@ class UsersTableSeeder extends Seeder
         \App\TableHandle::copyTableStructure('addons','addons_1');
         \App\TableHandle::copyTableStructure('ghs','ghs_1');
         \App\TableHandle::copyTableStructure('tracks','tracks_1');
+        \App\TableHandle::copyTableStructure('swts','swts_1');
 //        DB::table('consults')->insert([
 //            ['id' => '1','name'=>'swt','display_name' => '商务通'],
 //            ['id' => '2','name'=>'swt-wx','display_name' => '商务通转微'],
@@ -88,6 +89,7 @@ class UsersTableSeeder extends Seeder
             'logs'=>'日志',
             'members'=>'客户信息',
             'tracks'=>'回访',
+            'swts'=>'商务通',
         ];
         $perms=['read'=>'查看', 'create'=>'新增', 'update'=>'更新', 'delete'=>'删除'];
         foreach ($slugs as $k=>$v){
