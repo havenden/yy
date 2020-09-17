@@ -3,39 +3,39 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item">
-            <a href="/home" class="nav-link {{Request::is('home')?'active':''}}">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                    首页
-                </p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="{{ route('user.ranking') }}" class="nav-link {{Request::is('ranking*')?'active':''}}">
-                <i class="nav-icon fas fa-chart-bar"></i>
-                <p>
-                    客服排行
-                </p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="{{ route('member.index') }}" class="nav-link {{Request::is('member*')?'active':''}}">
-                <i class="nav-icon fas fa-list-alt"></i>
-                <p>
-                    信息列表
-                </p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="{{ route('track.index') }}" class="nav-link {{Request::is('track*')?'active':''}}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                    待跟踪回访
-                    <span class="right badge badge-danger" id="onTracking"></span>
-                </p>
-            </a>
-        </li>
+{{--        <li class="nav-item">--}}
+{{--            <a href="/home" class="nav-link {{Request::is('home')?'active':''}}">--}}
+{{--                <i class="nav-icon fas fa-tachometer-alt"></i>--}}
+{{--                <p>--}}
+{{--                    首页--}}
+{{--                </p>--}}
+{{--            </a>--}}
+{{--        </li>--}}
+{{--        <li class="nav-item">--}}
+{{--            <a href="{{ route('user.ranking') }}" class="nav-link {{Request::is('ranking*')?'active':''}}">--}}
+{{--                <i class="nav-icon fas fa-chart-bar"></i>--}}
+{{--                <p>--}}
+{{--                    客服排行--}}
+{{--                </p>--}}
+{{--            </a>--}}
+{{--        </li>--}}
+{{--        <li class="nav-item">--}}
+{{--            <a href="{{ route('member.index') }}" class="nav-link {{Request::is('member*')?'active':''}}">--}}
+{{--                <i class="nav-icon fas fa-list-alt"></i>--}}
+{{--                <p>--}}
+{{--                    信息列表--}}
+{{--                </p>--}}
+{{--            </a>--}}
+{{--        </li>--}}
+{{--        <li class="nav-item">--}}
+{{--            <a href="{{ route('track.index') }}" class="nav-link {{Request::is('track*')?'active':''}}">--}}
+{{--                <i class="nav-icon fas fa-comments"></i>--}}
+{{--                <p>--}}
+{{--                    待跟踪回访--}}
+{{--                    <span class="right badge badge-danger" id="onTracking"></span>--}}
+{{--                </p>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <li class="nav-item has-treeview {{Request::is('data/*')?'menu-open':''}}">
             <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-database"></i>
