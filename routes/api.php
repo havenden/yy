@@ -18,6 +18,6 @@ use Illuminate\Http\Request;
 //});
 
 Route::group(['middleware'=>['api']],function(){
-
+    Route::any('get-yy-swts-info','ApiController@getYySwts');
 
 });

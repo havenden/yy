@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Swt;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
@@ -30,7 +31,7 @@ class SwtsImport implements ToModel,WithHeadingRow
                     $swt= new Swt($this->getSwt());
                     $swt->sid = $row['编号'] ?? '';
                     $swt->swt_id = trim($row['永久身份'],"'") ?? '';
-                    $swt->start_time = $row['开始访问时间'] ?? $row['开始对话时间']?? '';
+                    $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
                     $swt->author = $row['初始接待客服'] ?? '';
                     $swt->authors = $row['参与接待客服'] ?? '';
                     $swt->msg_num = $row['客人讯息数'] ?? '';

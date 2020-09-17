@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            ['id' => '1','name' => 'admin', 'display_name' => '管理员',  'is_active' => '1','tell' => '','hid'=>1,'password' => Hash::make('adming')],
+            ['id' => '1','name' => 'admin', 'display_name' => '管理员',  'is_active' => '1','tell' => '','hid'=>12,'password' => Hash::make('adming')],
           ]);
         $users=\App\User::where('id','>',1)->get();
         foreach ($users as $user){
@@ -38,14 +38,14 @@ class UsersTableSeeder extends Seeder
 ////        ]);
         //医院
         DB::table('hospitals')->insert([
-            ['id' => '1', 'name' => 'whsznyy',   'display_name' => '武汉送子鸟医院'],
+            ['id' => '12', 'name' => 'whsznyy',   'display_name' => '武汉送子鸟医院'],
         ]);
         //为医院/项目 添加表
-        \App\TableHandle::copyTableStructure('members','members_1');
-        \App\TableHandle::copyTableStructure('addons','addons_1');
-        \App\TableHandle::copyTableStructure('ghs','ghs_1');
-        \App\TableHandle::copyTableStructure('tracks','tracks_1');
-        \App\TableHandle::copyTableStructure('swts','swts_1');
+        \App\TableHandle::copyTableStructure('members','members_12');
+        \App\TableHandle::copyTableStructure('addons','addons_12');
+        \App\TableHandle::copyTableStructure('ghs','ghs_12');
+        \App\TableHandle::copyTableStructure('tracks','tracks_12');
+        \App\TableHandle::copyTableStructure('swts','swts_12');
 //        DB::table('consults')->insert([
 //            ['id' => '1','name'=>'swt','display_name' => '商务通'],
 //            ['id' => '2','name'=>'swt-wx','display_name' => '商务通转微'],
@@ -58,10 +58,10 @@ class UsersTableSeeder extends Seeder
 //            ['id' => '9','name'=>'market120-wx','display_name' => '市场120转微信']
 //        ]);
         DB::table('doctors')->insert([
-            ['id' => '1','hid'=>'1','name'=>'罗善芝'],
-            ['id' => '2','hid'=>'1','name'=>'孔丹'],
-            ['id' => '3','hid'=>'1','name'=>'金慧娟'],
-            ['id' => '4','hid'=>'1','name'=>'吕宏炳'],
+            ['id' => '1','hid'=>'12','name'=>'罗善芝'],
+            ['id' => '2','hid'=>'12','name'=>'孔丹'],
+            ['id' => '3','hid'=>'12','name'=>'金慧娟'],
+            ['id' => '4','hid'=>'12','name'=>'吕宏炳'],
         ]);
         DB::table('conditions')->insert([
             ['id' => '1','name'=>'yd','display_name'=>'已到并挂号'],
@@ -112,28 +112,28 @@ class UsersTableSeeder extends Seeder
         }
         //病种
         DB::table('diseases')->insert([
-            ['id' => '1','hid'=>'1','name'=>'da','display_name' => 'A-输卵管性不孕'],
-            ['id' => '2','hid'=>'1','name'=>'db','display_name' => 'B-多囊卵巢'],
-            ['id' => '3','hid'=>'1','name'=>'dc','display_name' => 'C-胚胎停育，自然流产'],
-            ['id' => '4','hid'=>'1','name'=>'dd','display_name' => 'D-卵巢早衰'],
-            ['id' => '5','hid'=>'1','name'=>'de','display_name' => 'E-免疫性不孕'],
-            ['id' => '6','hid'=>'1','name'=>'df','display_name' => 'F-备孕三个月内'],
-            ['id' => '7','hid'=>'1','name'=>'dg','display_name' => 'G-卵巢性不孕'],
-            ['id' => '8','hid'=>'1','name'=>'dh','display_name' => 'H-月经不调，激素异常'],
-            ['id' => '9','hid'=>'1','name'=>'di','display_name' => 'I-卵泡发育异常，排卵障碍'],
-            ['id' => '10','hid'=>'1','name'=>'dj','display_name' => 'J-子宫性不孕，宫腔黏连，子宫内膜异常，腺肌症'],
-            ['id' => '11','hid'=>'1','name'=>'dm','display_name' => 'M-精液异常（未检查）'],
-            ['id' => '12','hid'=>'1','name'=>'dn','display_name' => 'N-男性炎症（包皮过长，包茎，前列腺炎，精索静脉曲张）'],
-            ['id' => '13','hid'=>'1','name'=>'do','display_name' => 'o-妇科炎症（各种妇科炎症）'],
-            ['id' => '14','hid'=>'1','name'=>'dp','display_name' => 'P-不孕不育待查'],
-            ['id' => '15','hid'=>'1','name'=>'dq','display_name' => 'Q-无精症'],
-            ['id' => '16','hid'=>'1','name'=>'dr','display_name' => 'R-少精，弱精，死精，畸形精子'],
-            ['id' => '17','hid'=>'1','name'=>'ds','display_name' => 'S-死精症'],
-            ['id' => '18','hid'=>'1','name'=>'dt','display_name' => 'T-其他（人流，保胎等等）'],
-            ['id' => '19','hid'=>'1','name'=>'dw','display_name' => 'W-性功能障碍'],
-            ['id' => '20','hid'=>'1','name'=>'dx','display_name' => 'X-试管，人授'],
-            ['id' => '21','hid'=>'1','name'=>'dy','display_name' => 'Y-吻合（输卵，精管复通）'],
-            ['id' => '22','hid'=>'1','name'=>'dz','display_name' => 'Z-医院品牌词'],
+            ['id' => '1','hid'=>'12','name'=>'da','display_name' => 'A-输卵管性不孕'],
+            ['id' => '2','hid'=>'12','name'=>'db','display_name' => 'B-多囊卵巢'],
+            ['id' => '3','hid'=>'12','name'=>'dc','display_name' => 'C-胚胎停育，自然流产'],
+            ['id' => '4','hid'=>'12','name'=>'dd','display_name' => 'D-卵巢早衰'],
+            ['id' => '5','hid'=>'12','name'=>'de','display_name' => 'E-免疫性不孕'],
+            ['id' => '6','hid'=>'12','name'=>'df','display_name' => 'F-备孕三个月内'],
+            ['id' => '7','hid'=>'12','name'=>'dg','display_name' => 'G-卵巢性不孕'],
+            ['id' => '8','hid'=>'12','name'=>'dh','display_name' => 'H-月经不调，激素异常'],
+            ['id' => '9','hid'=>'12','name'=>'di','display_name' => 'I-卵泡发育异常，排卵障碍'],
+            ['id' => '10','hid'=>'12','name'=>'dj','display_name' => 'J-子宫性不孕，宫腔黏连，子宫内膜异常，腺肌症'],
+            ['id' => '11','hid'=>'12','name'=>'dm','display_name' => 'M-精液异常（未检查）'],
+            ['id' => '12','hid'=>'12','name'=>'dn','display_name' => 'N-男性炎症（包皮过长，包茎，前列腺炎，精索静脉曲张）'],
+            ['id' => '13','hid'=>'12','name'=>'do','display_name' => 'o-妇科炎症（各种妇科炎症）'],
+            ['id' => '14','hid'=>'12','name'=>'dp','display_name' => 'P-不孕不育待查'],
+            ['id' => '15','hid'=>'12','name'=>'dq','display_name' => 'Q-无精症'],
+            ['id' => '16','hid'=>'12','name'=>'dr','display_name' => 'R-少精，弱精，死精，畸形精子'],
+            ['id' => '17','hid'=>'12','name'=>'ds','display_name' => 'S-死精症'],
+            ['id' => '18','hid'=>'12','name'=>'dt','display_name' => 'T-其他（人流，保胎等等）'],
+            ['id' => '19','hid'=>'12','name'=>'dw','display_name' => 'W-性功能障碍'],
+            ['id' => '20','hid'=>'12','name'=>'dx','display_name' => 'X-试管，人授'],
+            ['id' => '21','hid'=>'12','name'=>'dy','display_name' => 'Y-吻合（输卵，精管复通）'],
+            ['id' => '22','hid'=>'12','name'=>'dz','display_name' => 'Z-医院品牌词'],
         ]);
 
 
