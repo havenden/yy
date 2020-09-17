@@ -45,7 +45,7 @@ class ApiController extends Controller
             'status'=>$status,
             'body'=>$body,
         ];
-        return json_encode($data,JSON_UNESCAPED_UNICODE);
+        return json_encode($data);
 
     }
 }
