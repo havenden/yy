@@ -6,7 +6,7 @@
 .text-white{color:#fff !important;}
 .bg-yellow{background-color:#f8ac59 !important;}
 </style>
-    <div class="table-responsive">
+    <div class="table-responsive d-none">
         <table class="table table-sm table-bordered table-striped table-center w-100">
             <thead>
             <tr class="text-center">
@@ -82,7 +82,7 @@
             </tbody>
         </table>
     </div>
-    <div class="box-group row">
+    <div class="box-group row d-none">
         <div class="col-md-2">
             <div class="card">
                 <div class="card-header">
@@ -169,7 +169,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row d-none">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header border-transparent">
