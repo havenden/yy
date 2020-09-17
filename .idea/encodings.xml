@@ -2,11 +2,16 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$USER_HOME$/Desktop/cc/area.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/class.mysqli.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/config.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/disease.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/rp.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/rp.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/area.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/main.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/main.pm.bak.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/main.pm.php" charset="GBK" />
@@ -22,9 +27,6 @@
     <file url="file://$USER_HOME$/Desktop/cc/report.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/rp.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/rp.core.php" charset="GBK" />
-    <file url="file://$USER_HOME$/Desktop/cc/swtsis/swt.condition_form.php" charset="GBK" />
-    <file url="file://$USER_HOME$/Desktop/cc/swtsis/swt.core.php" charset="GBK" />
-    <file url="file://$USER_HOME$/Desktop/cc/swtsis/swt.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target_edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/character.do.php" charset="GBK" />
