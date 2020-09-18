@@ -22,7 +22,7 @@ class ApiController extends Controller
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
                 $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end]])->count();
-                $swtAddNoCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end],['member_type'],'广告否词'])->count();//广告否词
+                $swtAddNoCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end],['member_type','广告否词']])->count();//广告否词
                 $swtEffectiveCount=DB::table($table)->where([
                     ['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]
                 ])->count();

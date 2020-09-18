@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e9c538-9edd-4dfa-887b-45b88f8377bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="40" column="63" lean-forward="true" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+            <state relative-caret-position="588">
+              <caret line="37" column="163" lean-forward="true" selection-start-line="37" selection-start-column="163" selection-end-line="37" selection-end-column="163" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -440,21 +438,21 @@
       <workItem from="1600213759927" duration="17626000" />
       <workItem from="1600307391674" duration="12421000" />
       <workItem from="1600325274716" duration="14903000" />
-      <workItem from="1600386529242" duration="524000" />
+      <workItem from="1600386529242" duration="678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533727000" />
+    <option name="totallyTimeSpent" value="533881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.084754795" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.084754795" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" weight="0.22532189" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" visible="true" weight="0.22532189" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.3400853" side_tool="true" weight="0.40085745" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -952,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="40" column="63" lean-forward="true" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+        <state relative-caret-position="588">
+          <caret line="37" column="163" lean-forward="true" selection-start-line="37" selection-start-column="163" selection-end-line="37" selection-end-column="163" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
