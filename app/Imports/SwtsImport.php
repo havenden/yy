@@ -111,6 +111,7 @@ class SwtsImport implements ToModel,WithHeadingRow
      */
     public function getEffective($memberType,$msgType,$chatType)
     {
+        $effective=0;
         //对话类型 msg_type
         $effective_msg_types=['极佳对话','较好对话'];
         //对话类别 chat_type '转微信','转电话','预约','转QQ'
@@ -118,17 +119,17 @@ class SwtsImport implements ToModel,WithHeadingRow
         //客人类型 member_type
         $uneffective_member_type=['无效-已就诊','无效咨询','掉线','广告否词','问候'];
         if (in_array($memberType,$uneffective_member_type)){
-            return 0;
+            $effective = 0;
         }else{
             if (!empty(array_values(array_intersect($chatType,$effective_chat_types)))){
-                return 1;
+                $effective = 1;
             }else if (in_array($msgType,$effective_msg_types)){
-                return 1;
+                $effective = 1;
             }else{
-                return 0;
+                $effective = 0;
             }
         }
-
+        return $effective;
     }
 
     /**
