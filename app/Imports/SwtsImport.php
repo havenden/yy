@@ -24,7 +24,7 @@ class SwtsImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        if (isset($row['客人讯息数'])&&$row['客人讯息数']>0){
+        if (isset($row['客人讯息数'])&&$row['客人讯息数']>0&&$row['名称']!='测试'){
             if (is_numeric($row['编号'])){
                 $swtCount=DB::table('swts_'.$this->getSwtId())->where('sid', $row['编号'])->count();
                 if ($swtCount==0||empty($swtCount)){
@@ -45,7 +45,7 @@ class SwtsImport implements ToModel,WithHeadingRow
                     $swt->title = $row['名称'] ?? '';
                     $swt->account = $this->getAccount($row['对话来源']);
                     $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
-                    $swt->is_effective = $this->getEffective($row['对话类型'],explode(',',$row['对话类别']));
+                    $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
                     $swt->save();
                 }
             }
@@ -66,7 +66,8 @@ class SwtsImport implements ToModel,WithHeadingRow
      */
     public function getAccount($account)
     {
-        $preg= '/\&(baidu|sogou|shenma|360)[0-9_]{1}[0-9]{1,3}\&/';
+//        $preg= '/\&(baidu|sogou|shenma|360)[0-9_]{1}[0-9]{1,3}\&/';
+        $preg= '/\&(baidu|sogou|shenma|360)[-\w]{0,}\&/';
         preg_match($preg, $account,$matches);
         if (!empty($matches)){
             $ac=$matches[0];
@@ -108,24 +109,26 @@ class SwtsImport implements ToModel,WithHeadingRow
      * @param $contact
      * @return int
      */
-    public function getEffective($effective,$contact)
+    public function getEffective($memberType,$msgType,$chatType)
     {
-        $effectives=['极佳对话','较好对话'];
-        $contacts=['转微信','转电话'];
-        $effection1=in_array($effective,$effectives);
-        $effection2='';
-        $res=array_intersect($contacts,$contact);
-        $res = array_values($res);
-        if (empty($res)){
-            $effection2=false;
-        }else{
-            $effection2=true;
-        }
-        if ($effection1||$effection2){
-            return 1;
-        }else{
+        //对话类型 msg_type
+        $effective_msg_types=['极佳对话','较好对话'];
+        //对话类别 chat_type '转微信','转电话','预约','转QQ'
+        $effective_chat_types=['转微信','转电话','预约','转QQ'];
+        //客人类型 member_type
+        $uneffective_member_type=['无效-已就诊','无效咨询','掉线','广告否词','问候'];
+        if (in_array($memberType,$uneffective_member_type)){
             return 0;
+        }else{
+            if (!empty(array_values(array_intersect($chatType,$effective_chat_types)))){
+                return 1;
+            }else if (in_array($msgType,$effective_msg_types)){
+                return 1;
+            }else{
+                return 0;
+            }
         }
+
     }
 
     /**

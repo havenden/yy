@@ -148,7 +148,7 @@
     </div>
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-            <form action="{{ route('member.search') }}" method="get" id="searchModalForm" class="members-form form-horizontal w-100">
+            <form action="{{ route('swt.search') }}" method="get" id="searchModalForm" class="members-form form-horizontal w-100">
                 {{csrf_field()}}
                 <input type="hidden" name="model" value="modal">
             <div class="modal-content">
@@ -162,57 +162,127 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="condition" class="col-form-label col-sm-3">客户状态</label>
+                                <label for="condition" class="col-form-label col-sm-3">客人类别</label>
                                 <div class="col-sm-9 mb-0">
-                                    <select name="condition" id="condition" name="condition" class="form-control select2" data-placeholder="选择一个客户状态">
-                                        <option value="">状态</option>
-                                        @if(isset($conditions)&&!empty($conditions))
-                                            @foreach($conditions as $condition)
-                                                <option value="{{ $condition->id }}">{{ $condition->display_name }}</option>
+                                    <select name="member_type" id="member_type" name="member_type" class="form-control select2" data-placeholder="客人类别">
+                                        <option value="">客人类别</option>
+                                        @if(isset($memberTypes)&&!empty($memberTypes))
+                                            @foreach($memberTypes as $memberType)
+                                                <option value="{{ $memberType }}">{{ $memberType }}</option>
                                             @endforeach
                                         @endif
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="channel" class="col-form-label col-sm-3">来源渠道</label>
+                                <label for="chat_type" class="col-form-label col-sm-3">对话类别</label>
                                 <div class="col-sm-9 mb-0">
-                                    <select name="channel" id="channel" name="channel" class="form-control select2" data-placeholder="选择一个来源渠道">
-                                        <option value="">来源渠道</option>
-                                        @if(isset($channels)&&!empty($channels))
-                                            @foreach($channels as $k=>$v)
-                                                <option value="{{ $k }}">{{ $v }}</option>
+                                    <select name="chat_type" id="chat_type" name="chat_type" class="form-control select2" data-placeholder="对话类别">
+                                        <option value="">对话类别</option>
+                                        @if(isset($chatTypes)&&!empty($chatTypes))
+                                            @foreach($chatTypes as $chatType)
+                                                <option value="{{ $chatType }}">{{ $chatType }}</option>
                                             @endforeach
                                         @endif
                                     </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="is_effective" class="col-form-label col-sm-3">是否有效</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="is_effective" id="is_effective" name="is_effective" class="form-control select2" data-placeholder="是否有效">
+                                        <option value="">是否有效</option>
+                                        <option value="1">有效对话</option>
+                                        <option value="0">无效对话</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="account" class="col-form-label col-sm-3">账户后缀</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="account" id="account" name="account" class="form-control select2" data-placeholder="账户后缀">
+                                        <option value="">账户后缀</option>
+                                        @if(isset($accounts)&&!empty($accounts))
+                                            @foreach($accounts as $account)
+                                                <option value="{{ $account }}">{{ $account }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="keyword" class="col-form-label col-sm-3">关键词</label>
+                                <div class="col-sm-9 mb-0">
+                                    <input name="keyword" id="keyword" name="keyword" class="form-control" placeholder="关键词"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="title" class="col-form-label col-sm-3">客人名称</label>
+                                <div class="col-sm-9 mb-0">
+                                    <input name="title" id="title" name="title" class="form-control" placeholder="客人名称"></input>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="condition" class="col-form-label col-sm-3">咨询方式</label>
+                                <label for="msg_type" class="col-form-label col-sm-3">对话类型</label>
                                 <div class="col-sm-9 mb-0">
-                                    <select name="consult" id="consult" name="consult" class="form-control select2" data-placeholder="选择一个咨询方式">
-                                        <option value="">咨询方式</option>
-                                        @if(isset($consults)&&!empty($consults))
-                                            @foreach($consults as $k=>$v)
-                                                <option value="{{ $k }}">{{ $v }}</option>
+                                    <select name="msg_type" id="msg_type" name="msg_type" class="form-control select2" data-placeholder="对话类型">
+                                        <option value="">对话类型</option>
+                                        @if(isset($msgTypes)&&!empty($msgTypes))
+                                            @foreach($msgTypes as $msgType)
+                                                <option value="{{ $msgType }}">{{ $msgType }}</option>
                                             @endforeach
                                         @endif
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="user" class="col-form-label col-sm-3">客服</label>
+                                <label for="area" class="col-form-label col-sm-3">IP定位</label>
                                 <div class="col-sm-9 mb-0">
-                                    <select name="user" id="user" name="uid" class="form-control select2" data-placeholder="选择一个客服">
-                                        <option value="">客服</option>
-                                        @if(isset($activeUsers)&&!empty($activeUsers))
-                                            @foreach($activeUsers as $k=>$v)
-                                                <option value="{{ $k }}">{{ $v }}</option>
+                                    <select name="area" id="area" name="area" class="form-control select2" data-placeholder="IP定位">
+                                        <option value="">IP定位</option>
+                                        @if(isset($areas)&&!empty($areas))
+                                            @foreach($areas as $area)
+                                                <option value="{{ $area }}">{{ $area }}</option>
                                             @endforeach
                                         @endif
                                     </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="is_contact" class="col-form-label col-sm-3">是否留联</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="is_contact" id="is_contact" name="is_contact" class="form-control select2" data-placeholder="是否留联">
+                                        <option value="">是否留联</option>
+                                        <option value="1">是</option>
+                                        <option value="0">否</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="author" class="col-form-label col-sm-3">客服</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="author" id="author" name="author" class="form-control select2" data-placeholder="客服">
+                                        <option value="">客服</option>
+                                        @if(isset($authors)&&!empty($authors))
+                                            @foreach($authors as $author)
+                                                <option value="{{ $author }}">{{ $author }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="url" class="col-form-label col-sm-3">对话来源</label>
+                                <div class="col-sm-9 mb-0">
+                                    <input name="url" id="url" name="url" class="form-control" placeholder="对话来源"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="swt_id" class="col-form-label col-sm-3">永久身份</label>
+                                <div class="col-sm-9 mb-0">
+                                    <input name="swt_id" id="swt_id" name="swt_id" class="form-control" placeholder="商务通永久身份"></input>
                                 </div>
                             </div>
                         </div>

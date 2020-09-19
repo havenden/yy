@@ -2,6 +2,17 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$USER_HOME$/Desktop/cc/area.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/arrive/area.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/arrive/arrive.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/arrive/arrive.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/arrive/arrive.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/arrive/rp_kf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/area.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/area.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/area.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/area2.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/rp.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/asis/rp.core.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/class.mysqli.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/config.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/area.php" charset="GBK" />

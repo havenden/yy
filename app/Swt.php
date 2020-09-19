@@ -21,4 +21,57 @@ class Swt extends Model
         }
 
     }
+
+    /**
+     * 商务通客服
+     * @return mixed
+     */
+    public static function getAuthors()
+    {
+        return Swt::select('author')->distinct()->pluck('author')->toArray();
+    }
+
+    /**
+     * 对话类型
+     * @return array
+     */
+    public static function getMsgType()
+    {
+        return Swt::select('msg_type')->distinct()->pluck('msg_type')->toArray();
+    }
+    /**
+     * 客人类别
+     * @return array
+     */
+    public static function getMemberType()
+    {
+        return Swt::select('member_type')->distinct()->pluck('member_type')->toArray();
+    }
+    /**
+     * 对话类别
+     * @return array
+     */
+    public static function getChatType()
+    {
+        $types=Swt::select('chat_type')->distinct()->pluck('chat_type')->toArray();
+        $typesArray=implode(',',$types);
+        $res=array_unique(explode(',',$typesArray));
+        return $res;
+    }
+    /**
+     * 地域
+     * @return array
+     */
+    public static function getAreas()
+    {
+        return Swt::select('area')->distinct()->pluck('area')->toArray();
+    }
+    /**
+     * 账户后缀
+     * @return array
+     */
+    public static function getAccount()
+    {
+        return Swt::select('account')->distinct()->pluck('account')->toArray();
+    }
 }

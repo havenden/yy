@@ -8,6 +8,7 @@ use App\Jobs\ExcelImport;
 use App\Swt;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -23,6 +24,12 @@ class SwtController extends Controller
         if(Auth::user()->id==1||Auth::user()->hasPermissionTo('swts_read')){
             return view('swt.index',
                 [
+                    'memberTypes' => Swt::getMemberType(),
+                    'chatTypes' => Swt::getChatType(),
+                    'msgTypes' => Swt::getMsgType(),
+                    'accounts' => Swt::getAccount(),
+                    'areas' => Swt::getAreas(),
+                    'authors' => Swt::getAuthors(),
                     'swts' => Swt::orderBy('start_time','desc')->paginate(18),
                 ]
             );
@@ -125,6 +132,12 @@ class SwtController extends Controller
             $model = $request->input('model');
             if (!empty($key)) {
                 return view('swt.index', [
+                    'memberTypes' => Swt::getMemberType(),
+                    'chatTypes' => Swt::getChatType(),
+                    'msgTypes' => Swt::getMsgType(),
+                    'accounts' => Swt::getAccount(),
+                    'areas' => Swt::getAreas(),
+                    'authors' => Swt::getAuthors(),
                     'swts' => Swt::where('sid', 'like', '%' . $key . '%')
                         ->orWhere('swt_id', 'like', '%' . $key . '%')
                         ->orWhere('author', 'like', '%' . $key . '%')
@@ -142,36 +155,31 @@ class SwtController extends Controller
                 ]);
             }elseif ($model=='modal'){
                 $options=[];
-                if (!empty($request->input('condition'))){array_push($options,['condition','=',$request->input('condition')]);}
-                if (!empty($request->input('channel'))){array_push($options,['channel','=',$request->input('channel')]);}
-                if (!empty($request->input('doctor'))){array_push($options,['doctor','=',$request->input('doctor')]);}
-                if (!empty($request->input('consult'))){array_push($options,['consult','=',$request->input('consult')]);}
-                if (!empty($request->input('user'))){array_push($options,['uid','=',$request->input('user')]);}
-                if (!empty($request->input('cfz'))){array_push($options,['cfz','=',$request->input('cfz')]);}
-                if (!empty($request->input('grade'))){array_push($options,['grade','=',$request->input('grade')]);}
-                if (!empty($request->input('created_at_start'))){array_push($options,['created_at','>=',Carbon::createFromFormat('Y-m-d',$request->input('created_at_start'))->startOfDay()]);}
-                if (!empty($request->input('created_at_end'))){array_push($options,['created_at','<=',Carbon::createFromFormat('Y-m-d',$request->input('created_at_end'))->endOfDay()]);}
-                if ($request->input('pubdate')=='all'){array_push($options,['pubdate','!=','']);}
-                if (!empty($request->input('pubdate_start'))){array_push($options,['pubdate','>=',Carbon::createFromFormat('Y-m-d',$request->input('pubdate_start'))->startOfDay()]);}
-                if (!empty($request->input('pubdate_end'))){array_push($options,['pubdate','<=',Carbon::createFromFormat('Y-m-d',$request->input('pubdate_end'))->endOfDay()]);}
-                if (!empty($request->input('okdate_start'))){array_push($options,['okdate','>=',Carbon::createFromFormat('Y-m-d',$request->input('okdate_start'))->startOfDay()]);}
-                if (!empty($request->input('okdate_end'))){array_push($options,['okdate','<=',Carbon::createFromFormat('Y-m-d',$request->input('okdate_end'))->endOfDay()]);}
-                $members= Member::select('id','name', 'age','wechat','yy_num','hid','condition','tell','uid','description','consult','created_at','pubdate','okdate')
-                    ->where($options);
-                if (!empty($request->input('disease'))){
-                    $members=$members->whereRaw("FIND_IN_SET(".$request->input('disease').",disease)");
-                }
-                return view('member.index', [
-                    'hospitals'=>Aiden::getAllHospitalsArray(),
-                    'consults'=>Aiden::getAllConsultsArray(),
-                    'channels'=>Aiden::getAllChannelsArray(),
-                    'conditions'=>Condition::select('id','display_name')->get(),
-                    'conditionsArray'=>Aiden::getAllConditionsArray(),
-                    'users'=>Aiden::getAllUsersArray(),
-                    'activeUsers'=>Aiden::getAllActiveUsersArray(),
-                    'diseases'=>Aiden::getAllDiseasesArray(),
-                    'doctors'=>Aiden::getAllDoctorsArray(),
-                    'members' => $members->orderBy('id','desc')->paginate(12)
+                if (!empty($request->input('member_type'))){array_push($options,['member_type','=',$request->input('member_type')]);}
+                if (!empty($request->input('chat_type'))){array_push($options,['chat_type','=',$request->input('chat_type')]);}
+                if (!empty($request->input('is_effective'))){array_push($options,['is_effective','=',$request->input('is_effective')]);}
+                if (!empty($request->input('account'))){array_push($options,['account','like','%'.$request->input('account').'%']);}
+                if (!empty($request->input('msg_type'))){array_push($options,['msg_type','=',$request->input('msg_type')]);}
+                if (!empty($request->input('area'))){array_push($options,['area','=',$request->input('area')]);}
+                if (!empty($request->input('is_contact'))){array_push($options,['is_contact','=',$request->input('is_contact')]);}
+                if (!empty($request->input('author'))){array_push($options,['author','=',$request->input('author')]);}
+                if (!empty($request->input('keyword'))){array_push($options,['keyword','like','%'.$request->input('keyword').'%']);}
+                if (!empty($request->input('title'))){array_push($options,['title','like','%'.$request->input('title').'%']);}
+                if (!empty($request->input('url'))){array_push($options,['url','like','%'.$request->input('url').'%']);}
+                if (!empty($request->input('swt_id'))){array_push($options,['swt_id','like','%'.$request->input('swt_id').'%']);}
+
+                if (!empty($request->input('time_start'))){array_push($options,['start_time','>=',Carbon::createFromFormat('Y-m-d',$request->input('time_start'))->startOfDay()]);}
+                if (!empty($request->input('time_end'))){array_push($options,['start_time','<=',Carbon::createFromFormat('Y-m-d',$request->input('time_end'))->endOfDay()]);}
+
+                $members= Swt::where($options);
+                return view('swt.index', [
+                    'memberTypes' => Swt::getMemberType(),
+                    'chatTypes' => Swt::getChatType(),
+                    'msgTypes' => Swt::getMsgType(),
+                    'accounts' => Swt::getAccount(),
+                    'areas' => Swt::getAreas(),
+                    'authors' => Swt::getAuthors(),
+                    'swts' => $members->orderBy('start_time','desc')->paginate(12)
                 ]);
             }else {
                 return redirect()->route('swt.index');
