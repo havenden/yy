@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e9c538-9edd-4dfa-887b-45b88f8377bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Imports/SwtsImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/SwtsImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Swt.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Swt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_182311_create_swts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_182311_create_swts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/swt/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/swt/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,26 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SwtController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-              <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Swt.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
-              <folding>
-                <element signature="e#23#62#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="613">
+              <caret line="81" column="59" lean-forward="true" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -49,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Imports/SwtsImport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+            <state relative-caret-position="546">
+              <caret line="80" column="83" selection-start-line="80" selection-start-column="83" selection-end-line="80" selection-end-column="83" />
               <folding>
                 <element signature="e#31#43#0#PHP" expanded="true" />
               </folding>
@@ -59,15 +40,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/swt/index.blade.php">
+        <entry file="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="274" column="120" selection-start-line="274" selection-start-column="120" selection-end-line="274" selection-end-column="120" />
-              <folding>
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="567">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="67" lean-forward="true" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -144,11 +129,9 @@
         <option value="$USER_HOME$/Desktop/cc/swtsis/swt.condition_form.php" />
         <option value="$USER_HOME$/Desktop/cc/swtsis/swt.core.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AidenController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$USER_HOME$/Desktop/cc/m/swtsis/swt.core.php" />
         <option value="$USER_HOME$/Desktop/cc/m/swtsis/swt.condition_form.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$USER_HOME$/Desktop/cc/arrive/arrive.condition_form.php" />
         <option value="$USER_HOME$/Desktop/cc/arrive/arrive.core.php" />
         <option value="$USER_HOME$/Desktop/cc/arrive/arrive.php" />
@@ -177,10 +160,12 @@
         <option value="$USER_HOME$/Desktop/宋继飘/class.power.php" />
         <option value="$USER_HOME$/Desktop/宋继飘/report/rp_all.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_09_11_182311_create_swts_table.php" />
-        <option value="$PROJECT_DIR$/app/Imports/SwtsImport.php" />
         <option value="$PROJECT_DIR$/resources/views/swt/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" />
         <option value="$PROJECT_DIR$/app/Swt.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
+        <option value="$PROJECT_DIR$/app/Imports/SwtsImport.php" />
       </list>
     </option>
   </component>
@@ -291,9 +276,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
-    <option name="y" value="58" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="167" />
+    <option name="y" value="34" />
     <option name="width" value="1751" />
     <option name="height" value="905" />
   </component>
@@ -461,19 +446,19 @@
       <workItem from="1600386529242" duration="30504000" />
       <workItem from="1600476734485" duration="22945000" />
       <workItem from="1600560214075" duration="26687000" />
-      <workItem from="1600646272910" duration="12876000" />
+      <workItem from="1600646272910" duration="17502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="626215000" />
+    <option name="totallyTimeSpent" value="630841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="58" width="1751" height="905" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1655825" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" weight="0.22178988" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -534,36 +519,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/cc/arrive/arrive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="56" column="129" lean-forward="true" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/asis/area.condition_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#2;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#3;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#4;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/asis/area.core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/cc/main.pm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12594">
@@ -592,13 +547,6 @@
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -964,16 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Imports/SwtsImport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
-          <folding>
-            <element signature="e#31#43#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Swt.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="788">
@@ -991,6 +929,42 @@
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/arrive/arrive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1449" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="81" column="59" lean-forward="true" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Imports/SwtsImport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="80" column="83" selection-start-line="80" selection-start-column="83" selection-end-line="80" selection-end-column="83" />
+          <folding>
+            <element signature="e#31#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="67" lean-forward="true" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
         </state>
       </provider>
     </entry>

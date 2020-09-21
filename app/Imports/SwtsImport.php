@@ -78,8 +78,8 @@ class SwtsImport implements ToModel,WithHeadingRow
      */
     private function getEngine($engineStr)
     {
-        $engines=['baidu'=>'百度','baibm'=>'劫持','sogou'=>'搜狗','sm'=>'神马','so'=>'360','xywyfc'=>'寻医问药','xywy'=>'寻医问药'];
-        $preg= '/^http[s]{0,1}:\/\/([-\w\.]{1,})\.(baidu|baibm|sm|so|sogou|xywy)\.(com|cn)\//';
+        $engines=['baidu'=>'百度','baibm'=>'劫持','sogou'=>'搜狗','sm'=>'神马','so'=>'360','xywy'=>'寻医问药','39'=>'39健康','120ask'=>'120ask快速问医生'];
+        $preg= '/^http[s]{0,1}:\/\/([-\w\.]{1,})\.(baidu|baibm|sm|so|sogou|xywy|39|120ask)\.(com|cn|net)\//';
         preg_match($preg, $engineStr,$matches);
         if(!empty($matches)&&isset($engines[$matches[2]])){
             return $engines[$matches[2]];

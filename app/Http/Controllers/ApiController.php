@@ -50,6 +50,44 @@ class ApiController extends Controller
             'body'=>$body,
         ];
         return json_encode($data);
+    }
 
+    public function getMediaSwts(Request $request)
+    {
+        $status=0;
+        $body=[];
+        $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
+        $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
+        $hid=intval($request->input('hid'));
+        if (isset($hid)&&$hid>0){
+            $table='swts_'.$hid;
+            if (Schema::hasTable($table)){
+//                $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->count();
+//                $swtDevice=DB::table($table)->select(DB::raw('count(device) as c, device'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('device')->pluck('c','device')->toArray();
+                $swtMobile=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1],['device','mobile']])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
+                $swtPc=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1],['device','pc']])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
+                $body['count']=0;
+                $body['device']=[
+                    'mobile'=>['count'=>0,'media'=>[]],
+                    'pc'=>['count'=>0,'media'=>[]],
+                ];
+                foreach ($swtMobile as $m=>$v){
+                    $body['count'] += intval($v);
+                    $body['device']['mobile']['count'] += intval($v);
+                    $body['device']['mobile']['media'][$m]=$v;
+                }
+                foreach ($swtPc as $p=>$va){
+                    $body['count'] += intval($va);
+                    $body['device']['pc']['count'] += intval($va);
+                    $body['device']['pc']['media'][$p]=$va;
+                }
+                $status=1;
+            }
+        }
+        $data=[
+            'status'=>$status,
+            'body'=>$body,
+        ];
+        return json_encode($data);
     }
 }
