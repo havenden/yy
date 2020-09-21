@@ -30,6 +30,8 @@ class SwtController extends Controller
                     'accounts' => Swt::getAccount(),
                     'areas' => Swt::getAreas(),
                     'authors' => Swt::getAuthors(),
+                    'engineFroms' => Swt::getEngineFroms(),
+                    'devices' => Swt::getDevices(),
                     'swts' => Swt::orderBy('start_time','desc')->paginate(18),
                 ]
             );
@@ -163,6 +165,8 @@ class SwtController extends Controller
                 if (!empty($request->input('area'))){array_push($options,['area','=',$request->input('area')]);}
                 if (!empty($request->input('is_contact'))){array_push($options,['is_contact','=',$request->input('is_contact')]);}
                 if (!empty($request->input('author'))){array_push($options,['author','=',$request->input('author')]);}
+                if (!empty($request->input('engine_from'))){array_push($options,['engine_from','=',$request->input('engine_from')]);}
+                if (!empty($request->input('device'))){array_push($options,['device','=',$request->input('device')]);}
                 if (!empty($request->input('keyword'))){array_push($options,['keyword','like','%'.$request->input('keyword').'%']);}
                 if (!empty($request->input('title'))){array_push($options,['title','like','%'.$request->input('title').'%']);}
                 if (!empty($request->input('url'))){array_push($options,['url','like','%'.$request->input('url').'%']);}
@@ -179,6 +183,8 @@ class SwtController extends Controller
                     'accounts' => Swt::getAccount(),
                     'areas' => Swt::getAreas(),
                     'authors' => Swt::getAuthors(),
+                    'engineFroms' => Swt::getEngineFroms(),
+                    'devices' => Swt::getDevices(),
                     'swts' => $members->orderBy('start_time','desc')->paginate(12)
                 ]);
             }else {
@@ -210,6 +216,10 @@ class SwtController extends Controller
             $data['swt']['keyword'] = $member->keyword;
             $data['swt']['area'] = $member->area;
             $data['swt']['title'] = $member->title;
+            $data['swt']['engine'] = $member->engine;
+            $data['swt']['engine_from'] = $member->engine_from;
+            $data['swt']['os'] = $member->os;
+            $data['swt']['device'] = $member->device=='mobile'?'移动':'PC';
             $data['swt']['account'] = $member->account;
             $data['swt']['is_effective'] = $member->is_effective==1?'有效对话':'无效对话';
             $data['swt']['is_contact'] = $member->is_contact==1?'留联':'';

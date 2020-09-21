@@ -72,7 +72,8 @@
                         <th style="">关键词</th>
                         <th style="">IP定位</th>
 {{--                        <th style="">永久身份</th>--}}
-                        <th style="">对话来源</th>
+                        <th style="">渠道来源</th>
+                        <th style="">移动PC</th>
                         <th style="">是否有效</th>
                         <th style="">是否留联</th>
                         <th style="">账户后缀</th>
@@ -93,7 +94,8 @@
                                 <td>{{ $swt->keyword }}</td>
                                 <td>{{ $swt->area }}</td>
 {{--                                <td>{{ $swt->swt_id }}</td>--}}
-                                <td >{{ \Illuminate\Support\Str::limit($swt->url,20) }}</td>
+                                <td >{{ $swt->engine_from }}</td>
+                                <td >{{ $swt->device=='mobile'?'移动':'PC' }}</td>
                                 <td><span class="{{  $swt->is_effective==1?'text-blue':'' }}">{{ $swt->is_effective==1?"有效对话":'无效对话' }}</span></td>
                                 <td><span class="{{  $swt->is_contact==1?'text-blue':'' }}">{{ $swt->is_contact==1?"留联":'' }}</span></td>
                                 <td>{{ $swt->account }}</td>
@@ -188,6 +190,19 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="engine_from" class="col-form-label col-sm-3">渠道来源</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="engine_from" id="engine_from" name="engine_from" class="form-control select2" data-placeholder="渠道来源">
+                                        <option value="">渠道来源</option>
+                                        @if(isset($engineFroms)&&!empty($engineFroms))
+                                            @foreach($engineFroms as $engineFrom)
+                                                <option value="{{ $engineFrom }}">{{ $engineFrom }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="is_effective" class="col-form-label col-sm-3">是否有效</label>
                                 <div class="col-sm-9 mb-0">
                                     <select name="is_effective" id="is_effective" name="is_effective" class="form-control select2" data-placeholder="是否有效">
@@ -245,6 +260,19 @@
                                         @if(isset($areas)&&!empty($areas))
                                             @foreach($areas as $area)
                                                 <option value="{{ $area }}">{{ $area }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="device" class="col-form-label col-sm-3">移动PC</label>
+                                <div class="col-sm-9 mb-0">
+                                    <select name="device" id="device" name="device" class="form-control select2" data-placeholder="移动PC">
+                                        <option value="">移动PC</option>
+                                        @if(isset($devices)&&!empty($devices))
+                                            @foreach($devices as $device)
+                                                <option value="{{ $device }}">{{ $device=='mobile'?'移动':'PC' }}</option>
                                             @endforeach
                                         @endif
                                     </select>
@@ -405,9 +433,13 @@
                             htmlcontent += '<tr><td class=\"text-nowrap\">客人类别</td><td>'+data.swt.member_type+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">对话类型</td><td>'+data.swt.msg_type+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">对话类别</td><td>'+data.swt.chat_type+'</td></tr>';
-                            htmlcontent += '<tr><td class=\"text-nowrap\">对话来源</td><td class=\"text-wrap\">'+data.swt.url+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">对话来源</td><td class=\"text-wrap\" style=\"word-break: break-all;\">'+data.swt.url+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">关键词</td><td>'+data.swt.keyword+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">地域</td><td>'+data.swt.area+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">访问来源</td><td  class=\"text-wrap\" style=\"word-break: break-all;\">'+data.swt.engine+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">来源</td><td>'+data.swt.engine_from+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">操作系统</td><td>'+data.swt.os+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">移动PC</td><td>'+data.swt.device+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">是否有效</td><td>'+data.swt.is_effective+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">是否留联</td><td>'+data.swt.is_contact+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">账户后缀</td><td>'+data.swt.account+'</td></tr></table></div>';

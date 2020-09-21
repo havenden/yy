@@ -29,6 +29,10 @@ class CreateSwtsTable extends Migration
             $table->string('keyword')->nullable()->comment('关键词');
             $table->string('area')->nullable()->comment('地域');
             $table->string('title')->nullable()->comment('名称');
+            $table->text('engine')->nullable()->comment('访问来源');
+            $table->string('engine_from')->nullable()->comment('搜索引擎');
+            $table->string('os')->nullable()->comment('操作系统');
+            $table->string('device')->nullable()->comment('移动PC');
             $table->string('account')->nullable()->comment('账户后缀');
             $table->integer('is_contact')->default(0)->comment('是否留联');
             $table->integer('is_effective')->default(0)->comment('是否有效');

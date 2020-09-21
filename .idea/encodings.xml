@@ -11,14 +11,19 @@
     <file url="file://$USER_HOME$/Desktop/cc/asis/area.core.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/asis/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/asis/area2.php" charset="GBK" />
-    <file url="file://$USER_HOME$/Desktop/cc/asis/rp.condition_form.php" charset="GBK" />
-    <file url="file://$USER_HOME$/Desktop/cc/asis/rp.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/class.mysql.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/class.mysqli.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/config.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/core.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/disease.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/rp.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/dsis/rp.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/function.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/hospital/hospital.edit.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/hospital/hospital.op.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/hospital/hospital.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/index.tpl.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.core.php" charset="GBK" />
@@ -26,6 +31,7 @@
     <file url="file://$USER_HOME$/Desktop/cc/main.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/main.pm.bak.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/main.pm.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/menu.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/output_name.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/patient.edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/patient.list.php" charset="GBK" />
@@ -40,24 +46,42 @@
     <file url="file://$USER_HOME$/Desktop/cc/rp.core.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target_edit.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/w_list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/base.js" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/character.do.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/character.edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/character.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/class.mysql.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/class.power.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/config.more.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/config.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/cost/cost.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/cost/cost_edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/distpicker.js" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/doctor.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/function.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/hospital/hospital.edit.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/import.html" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/index.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/index.tpl.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/login.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/main.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/main.pm.bak.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/media.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/media_edit.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/menu.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/menu.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/mtly.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/mtly3.php" charset="GB2312" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.list.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.list.tpl.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/patient.op.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/report/rp_all.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/rp_kf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/session.php" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../webgua/core/class.mysql.php" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../webgua/core/class.table.php" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../webgua/core/config.php" charset="GBK" />

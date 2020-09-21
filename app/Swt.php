@@ -74,4 +74,22 @@ class Swt extends Model
     {
         return Swt::select('account')->distinct()->pluck('account')->toArray();
     }
+
+    /**
+     * 搜索来源
+     * @return mixed
+     */
+    public static function getEngineFroms()
+    {
+        return Swt::select('engine_from')->distinct()->pluck('engine_from')->toArray();
+    }
+
+    /**
+     * 设备为移动设备或pc
+     * @return mixed
+     */
+    public static function getDevices()
+    {
+        return Swt::select('device')->distinct()->pluck('device')->toArray();
+    }
 }

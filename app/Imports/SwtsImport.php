@@ -32,18 +32,22 @@ class SwtsImport implements ToModel,WithHeadingRow
                     $swt->sid = $row['编号'] ?? '';
                     $swt->swt_id = trim($row['永久身份'],"'") ?? '';
                     $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
-                    $swt->author = $row['初始接待客服'] ?? '';
+                    $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
                     $swt->authors = $row['参与接待客服'] ?? '';
                     $swt->msg_num = $row['客人讯息数'] ?? '';
                     $swt->member_type = $row['客人类别'] ?? '';
                     $swt->msg_type = $row['对话类型'] ?? '';
                     $swt->chat_type = $row['对话类别'] ?? '';
-                    $swt->url = $row['对话来源'] ?? $row['初次访问网址'] ?? '';
-                    $swt->addr = $row['初次访问网址'] ?? $row['对话来源'] ?? '';
+                    $swt->engine = (string)$row['访问来源'] ??  '';
+                    $swt->engine_from = $this->getEngine($row['访问来源']);
+                    $swt->addr = (string)$row['初次访问网址'] ??  '';
+                    $swt->url = (string)$row['对话来源'] ??  '';
                     $swt->keyword = $this->clearText($row['关键词']);
                     $swt->area = $this->getArea($row['IP定位']) ?? '';
                     $swt->title = $row['名称'] ?? '';
-                    $swt->account = $this->getAccount($row['对话来源']);
+                    $swt->os = $row['操作系统'] ?? '';
+                    $swt->device = $this->getDevice($row['操作系统']) ?? '';
+                    $swt->account = $this->getAccount($row['初次访问网址'],$row['对话来源']);
                     $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
                     $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
                     $swt->save();
@@ -59,22 +63,56 @@ class SwtsImport implements ToModel,WithHeadingRow
         return ['hid'=>$this->hid];
     }
 
+    public function getDevice($device)
+    {
+        $agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+        if (in_array($device,$agents)){
+            return 'mobile';
+        }else{
+            return 'pc';
+        }
+    }
+    /**
+     * @param $engineStr
+     * @return mixed|string
+     */
+    private function getEngine($engineStr)
+    {
+        $engines=['baidu'=>'百度','baibm'=>'劫持','sogou'=>'搜狗','sm'=>'神马','so'=>'360','xywyfc'=>'寻医问药','xywy'=>'寻医问药'];
+        $preg= '/^http[s]{0,1}:\/\/([-\w\.]{1,})\.(baidu|baibm|sm|so|sogou|xywy)\.(com|cn)\//';
+        preg_match($preg, $engineStr,$matches);
+        if(!empty($matches)&&isset($engines[$matches[2]])){
+            return $engines[$matches[2]];
+        }else{
+            return '未知';
+        }
+
+    }
     /**
      * 账户后缀
      * @param $account
      * @return mixed|string
      */
-    public function getAccount($account)
+    public function getAccount($addr,$url)
     {
 //        $preg= '/\&(baidu|sogou|shenma|360)[0-9_]{1}[0-9]{1,3}\&/';
-        $preg= '/\&(baidu|sogou|shenma|360)[-\w]{0,}\&/';
-        preg_match($preg, $account,$matches);
-        if (!empty($matches)){
-            $ac=$matches[0];
-            return trim($ac,"&");
+//        $preg= '/\&(baidu|sogou|shenma|360)[-\w]{0,}\&/';
+        $preg= '/[\#\&]{1}(baidu|sogou|shenma|360)[-_0-9]{1}[\d]{0,2}/';
+        preg_match($preg, $addr,$matches1);
+        preg_match($preg, $url,$matches2);
+        if (!empty($matches1)){
+            $ac=$matches1[0];
+            $ac=trim($ac,"&");
+            $ac=trim($ac,"#");
+            return $ac;
+        }elseif (!empty($matches2)){
+            $ac=$matches2[0];
+            $ac=trim($ac,"&");
+            $ac=trim($ac,"#");
+            return $ac;
         }else{
             $preg2= '/(xywyfc)/';
-            preg_match($preg2, $account,$matches2);
+            preg_match($preg2, $addr,$matches2);
             if (!empty($matches2)){
                 $ac2=$matches2[0];
                 return $ac2;
@@ -201,5 +239,6 @@ class SwtsImport implements ToModel,WithHeadingRow
     {
         return $this->hid;
     }
+
 
 }
