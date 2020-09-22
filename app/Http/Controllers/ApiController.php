@@ -115,7 +115,7 @@ class ApiController extends Controller
         if (isset($hid)&&$hid>0){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
-                $body=DB::table($table)->select(DB::raw('count(area) as a, area'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('area')->pluck('a','area')->toArray();
+                $body=DB::table($table)->select(DB::raw('count(area) as a, area'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('area')->orderBy('a','desc')->pluck('a','area')->toArray();
                 $status=1;
             }
         }
