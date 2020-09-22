@@ -20,5 +20,6 @@ use Illuminate\Http\Request;
 Route::group(['middleware'=>['api']],function(){
     Route::any('get-yy-swts-info','ApiController@getYySwts');
     Route::any('get-meida-swts-info','ApiController@getMediaSwts');
+    Route::any('get-area-swts-info','ApiController@getAreaSwts');
 
 });

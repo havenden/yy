@@ -24,6 +24,9 @@
     <file url="file://$USER_HOME$/Desktop/cc/hospital/hospital.op.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/hospital/hospital.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/index.tpl.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/mediasis/media.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/mediasis/media.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/cc/m/mediasis/media.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.core.php" charset="GBK" />
@@ -79,6 +82,7 @@
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.list.tpl.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.op.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/patient.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/宋继飘/patient.search.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/report/rp_all.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/rp_kf.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/宋继飘/session.php" charset="GBK" />

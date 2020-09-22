@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Schema;
 
 class ApiController extends Controller
 {
+    /**
+     * 商务通有效对话分析
+     * @param Request $request
+     * @return false|string
+     */
     public function getYySwts(Request $request)
     {
         $status=0;
@@ -52,6 +57,11 @@ class ApiController extends Controller
         return json_encode($data);
     }
 
+    /**
+     * 有效对话媒体来源
+     * @param Request $request
+     * @return false|string
+     */
     public function getMediaSwts(Request $request)
     {
         $status=0;
@@ -81,6 +91,31 @@ class ApiController extends Controller
                     $body['device']['pc']['count'] += intval($va);
                     $body['device']['pc']['media'][$p]=$va;
                 }
+                $status=1;
+            }
+        }
+        $data=[
+            'status'=>$status,
+            'body'=>$body,
+        ];
+        return json_encode($data);
+    }
+
+    /**
+     * 有效对话地域分布
+     * @param Request $request
+     */
+    public function getAreaSwts(Request $request)
+    {
+        $status=0;
+        $body=[];
+        $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
+        $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
+        $hid=intval($request->input('hid'));
+        if (isset($hid)&&$hid>0){
+            $table='swts_'.$hid;
+            if (Schema::hasTable($table)){
+                $body=DB::table($table)->select(DB::raw('count(area) as a, area'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('area')->pluck('a','area')->toArray();
                 $status=1;
             }
         }
