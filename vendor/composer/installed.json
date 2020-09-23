@@ -449,17 +449,17 @@
     },
     {
         "name": "egulias/email-validator",
-        "version": "2.1.20",
-        "version_normalized": "2.1.20.0",
+        "version": "2.1.21",
+        "version_normalized": "2.1.21.0",
         "source": {
             "type": "git",
             "url": "https://github.com/egulias/EmailValidator.git",
-            "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff"
+            "reference": "563d0cdde5d862235ffe24a158497f4d490191b5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/f46887bc48db66c7f38f668eb7d6ae54583617ff",
-            "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff",
+            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/563d0cdde5d862235ffe24a158497f4d490191b5",
+            "reference": "563d0cdde5d862235ffe24a158497f4d490191b5",
             "shasum": "",
             "mirrors": [
                 {
@@ -481,7 +481,7 @@
         "suggest": {
             "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
         },
-        "time": "2020-09-06T13:44:32+00:00",
+        "time": "2020-09-19T14:37:56+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -515,17 +515,17 @@
     },
     {
         "name": "facade/flare-client-php",
-        "version": "1.3.5",
-        "version_normalized": "1.3.5.0",
+        "version": "1.3.6",
+        "version_normalized": "1.3.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/facade/flare-client-php.git",
-            "reference": "25907a113bfc212a38d458ae365bfb902b4e7fb8"
+            "reference": "451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/facade/flare-client-php/zipball/25907a113bfc212a38d458ae365bfb902b4e7fb8",
-            "reference": "25907a113bfc212a38d458ae365bfb902b4e7fb8",
+            "url": "https://api.github.com/repos/facade/flare-client-php/zipball/451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799",
+            "reference": "451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799",
             "shasum": "",
             "mirrors": [
                 {
@@ -544,11 +544,10 @@
         },
         "require-dev": {
             "friendsofphp/php-cs-fixer": "^2.14",
-            "larapack/dd": "^1.1",
             "phpunit/phpunit": "^7.5.16",
             "spatie/phpunit-snapshot-assertions": "^2.0"
         },
-        "time": "2020-08-26T18:06:23+00:00",
+        "time": "2020-09-18T06:35:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1361,17 +1360,17 @@
     },
     {
         "name": "league/commonmark",
-        "version": "1.5.4",
-        "version_normalized": "1.5.4.0",
+        "version": "1.5.5",
+        "version_normalized": "1.5.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/commonmark.git",
-            "reference": "21819c989e69bab07e933866ad30c7e3f32984ba"
+            "reference": "45832dfed6007b984c0d40addfac48d403dc6432"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/21819c989e69bab07e933866ad30c7e3f32984ba",
-            "reference": "21819c989e69bab07e933866ad30c7e3f32984ba",
+            "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/45832dfed6007b984c0d40addfac48d403dc6432",
+            "reference": "45832dfed6007b984c0d40addfac48d403dc6432",
             "shasum": "",
             "mirrors": [
                 {
@@ -1389,7 +1388,7 @@
         },
         "require-dev": {
             "cebe/markdown": "~1.0",
-            "commonmark/commonmark.js": "0.29.1",
+            "commonmark/commonmark.js": "0.29.2",
             "erusev/parsedown": "~1.0",
             "ext-json": "*",
             "github/gfm": "0.29.0",
@@ -1400,7 +1399,7 @@
             "scrutinizer/ocular": "^1.5",
             "symfony/finder": "^4.2"
         },
-        "time": "2020-08-18T01:19:12+00:00",
+        "time": "2020-09-13T14:44:46+00:00",
         "bin": [
             "bin/commonmark"
         ],
@@ -1563,17 +1562,17 @@
     },
     {
         "name": "league/mime-type-detection",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/mime-type-detection.git",
-            "reference": "fda190b62b962d96a069fcc414d781db66d65b69"
+            "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/fda190b62b962d96a069fcc414d781db66d65b69",
-            "reference": "fda190b62b962d96a069fcc414d781db66d65b69",
+            "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ea2fbfc988bade315acd5967e6d02274086d0f28",
+            "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28",
             "shasum": "",
             "mirrors": [
                 {
@@ -1590,7 +1589,7 @@
             "phpstan/phpstan": "^0.12.36",
             "phpunit/phpunit": "^8.5.8"
         },
-        "time": "2020-08-09T10:34:01+00:00",
+        "time": "2020-09-21T18:10:53+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2319,17 +2318,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "2.39.1",
-        "version_normalized": "2.39.1.0",
+        "version": "2.40.0",
+        "version_normalized": "2.40.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "7af467873250583cc967a59ee9df29fabab193c1"
+            "reference": "6c7646154181013ecd55e80c201b9fd873c6ee5d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7af467873250583cc967a59ee9df29fabab193c1",
-            "reference": "7af467873250583cc967a59ee9df29fabab193c1",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/6c7646154181013ecd55e80c201b9fd873c6ee5d",
+            "reference": "6c7646154181013ecd55e80c201b9fd873c6ee5d",
             "shasum": "",
             "mirrors": [
                 {
@@ -2354,7 +2353,7 @@
             "phpunit/phpunit": "^7.5 || ^8.0",
             "squizlabs/php_codesniffer": "^3.4"
         },
-        "time": "2020-09-04T13:11:37+00:00",
+        "time": "2020-09-11T19:00:58+00:00",
         "bin": [
             "bin/carbon"
         ],
@@ -2416,17 +2415,17 @@
     },
     {
         "name": "nikic/php-parser",
-        "version": "v4.9.1",
-        "version_normalized": "4.9.1.0",
+        "version": "v4.10.0",
+        "version_normalized": "4.10.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/nikic/PHP-Parser.git",
-            "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28"
+            "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/88e519766fc58bd46b8265561fb79b54e2e00b28",
-            "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28",
+            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1c13d05035deff45f1230ca68bd7d74d621762d9",
+            "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9",
             "shasum": "",
             "mirrors": [
                 {
@@ -2443,7 +2442,7 @@
             "ircmaxell/php-yacc": "^0.0.7",
             "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
         },
-        "time": "2020-08-30T16:15:20+00:00",
+        "time": "2020-09-19T14:52:48+00:00",
         "bin": [
             "bin/php-parse"
         ],
@@ -2845,17 +2844,17 @@
     },
     {
         "name": "phpdocumentor/reflection-docblock",
-        "version": "5.2.1",
-        "version_normalized": "5.2.1.0",
+        "version": "5.2.2",
+        "version_normalized": "5.2.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-            "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44"
+            "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
-            "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
+            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/069a785b2141f5bcf49f3e353548dc1cce6df556",
+            "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556",
             "shasum": "",
             "mirrors": [
                 {
@@ -2874,7 +2873,7 @@
         "require-dev": {
             "mockery/mockery": "~1.3.2"
         },
-        "time": "2020-08-15T11:14:08+00:00",
+        "time": "2020-09-03T19:13:55+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2905,17 +2904,17 @@
     },
     {
         "name": "phpdocumentor/type-resolver",
-        "version": "1.3.0",
-        "version_normalized": "1.3.0.0",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpDocumentor/TypeResolver.git",
-            "reference": "e878a14a65245fbe78f8080eba03b47c3b705651"
+            "reference": "6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e878a14a65245fbe78f8080eba03b47c3b705651",
-            "reference": "e878a14a65245fbe78f8080eba03b47c3b705651",
+            "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
+            "reference": "6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
             "shasum": "",
             "mirrors": [
                 {
@@ -2931,7 +2930,7 @@
         "require-dev": {
             "ext-tokenizer": "*"
         },
-        "time": "2020-06-27T10:12:23+00:00",
+        "time": "2020-09-17T18:55:26+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4914,17 +4913,17 @@
     },
     {
         "name": "spatie/laravel-permission",
-        "version": "3.16.0",
-        "version_normalized": "3.16.0.0",
+        "version": "3.17.0",
+        "version_normalized": "3.17.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/spatie/laravel-permission.git",
-            "reference": "c5082ee84e0d128896b4a6864a8502d8c5f1df08"
+            "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/c5082ee84e0d128896b4a6864a8502d8c5f1df08",
-            "reference": "c5082ee84e0d128896b4a6864a8502d8c5f1df08",
+            "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/35d40a45e49f5713f477823b571e05ef6a3a0394",
+            "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394",
             "shasum": "",
             "mirrors": [
                 {
@@ -4945,7 +4944,7 @@
             "phpunit/phpunit": "^8.0|^9.0",
             "predis/predis": "^1.1"
         },
-        "time": "2020-08-18T17:14:06+00:00",
+        "time": "2020-09-16T16:47:18+00:00",
         "type": "library",
         "extra": {
             "laravel": {
