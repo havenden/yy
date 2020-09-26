@@ -187,7 +187,7 @@ class SwtsImport implements ToModel,WithHeadingRow
             if (strpos($area,'襄樊')) {$rea = '襄阳';}
             elseif ($area=='湖北省'){$rea = '武汉';}
             elseif (strpos($area,'亚太地区')!==false){$rea = '武汉';}
-            else{$rea = '未知';}
+            else{$rea = '外省';}
         }
         return $rea;
     }
