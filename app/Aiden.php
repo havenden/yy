@@ -110,4 +110,9 @@ class Aiden extends Model
         ];
         return $tracksArray;
     }
+
+    public static function isActiveDomain($request)
+    {
+        return in_array($request->server('HTTP_HOST'),['oa.whsznyy.com','yy.whsznyy.com']);
+    }
 }

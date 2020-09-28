@@ -23,7 +23,7 @@ class ApiController extends Controller
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
-        if (isset($hid)&&$hid>0){
+        if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
                 $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end]])->count();
@@ -69,7 +69,7 @@ class ApiController extends Controller
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
-        if (isset($hid)&&$hid>0){
+        if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
 //                $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->count();
@@ -112,7 +112,7 @@ class ApiController extends Controller
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
-        if (isset($hid)&&$hid>0){
+        if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
                 $body=DB::table($table)->select(DB::raw('count(area) as a, area'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('area')->orderBy('a','desc')->pluck('a','area')->toArray();
