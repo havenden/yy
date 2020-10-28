@@ -51,18 +51,18 @@
                         <p>商务通</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('user.index') }}" class="nav-link {{Request::is('data/area*')?'active':''}}">
-                        <i class="fas fa-map-marker-alt nav-icon"></i>
-                        <p>地域</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user.index') }}" class="nav-link {{Request::is('data/time*')?'active':''}}">
-                        <i class="far fa-clock nav-icon"></i>
-                        <p>时段</p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{ route('user.index') }}" class="nav-link {{Request::is('data/area*')?'active':''}}">--}}
+{{--                        <i class="fas fa-map-marker-alt nav-icon"></i>--}}
+{{--                        <p>地域</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{ route('user.index') }}" class="nav-link {{Request::is('data/time*')?'active':''}}">--}}
+{{--                        <i class="far fa-clock nav-icon"></i>--}}
+{{--                        <p>时段</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </li>
         <li class="nav-item has-treeview {{Request::is('config/*')?'menu-open':''}}">

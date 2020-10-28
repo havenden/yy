@@ -4,8 +4,8 @@
     <list default="true" id="64e9c538-9edd-4dfa-887b-45b88f8377bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Aiden.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Aiden.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,29 +19,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4427" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="221" column="94" lean-forward="true" selection-start-line="221" selection-start-column="94" selection-end-line="221" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HospitalController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-801">
+              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+            <state relative-caret-position="231">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Aiden.php">
+        <entry file="file://$PROJECT_DIR$/app/Hospital.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AidenController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state relative-caret-position="-45">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -57,36 +82,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>check_power</find>
-      <find>del</find>
-      <find>op</find>
-      <find>create_patient_table</find>
-      <find>require</find>
-      <find>sql</find>
-      <find>sortid</find>
-      <find>POST</find>
-      <find>pre</find>
-      <find>padding-left:5px</find>
-      <find>swt</find>
-      <find>first</find>
-      <find>part_id</find>
-      <find>count_today</find>
-      <find>yd_all</find>
-      <find>count_male</find>
-      <find>source</find>
-      <find>device</find>
-      <find>picker</find>
-      <find>search</find>
-      <find>220</find>
-      <find>gbk</find>
-      <find>sqljoin</find>
-      <find>s_sql</find>
-      <find>addtime</find>
-      <find>query_first</find>
-      <find>user</find>
-      <find>where</find>
-      <find>print_r</find>
-      <find>change</find>
+      <find>if</find>
+      <find>update</find>
+      <find>add_yy</find>
+      <find>time_type</find>
+      <find>hos</find>
+      <find>targetTitle</find>
+      <find>ag</find>
+      <find>show</find>
+      <find>改约次数</find>
+      <find>arrivedays</find>
+      <find>sqlwhere</find>
+      <find>余亚丽</find>
+      <find>, `chengjiao`, `cj_sum`, `re_arrive`, `re_arrive_log`</find>
+      <find>, NULL, NULL, 0, NULL</find>
+      <find>`pid`,</find>
+      <find>, 0, 2,</find>
+      <find>patient_2</find>
+      <find>总到诊</find>
+      <find>hospital_ids</find>
+      <find>name</find>
+      <find>table</find>
+      <find>sys_admin</find>
+      <find>line</find>
+      <find>character_id</find>
+      <find>ch_data</find>
+      <find>qq</find>
+      <find>PBT96458070</find>
+      <find>kc5959</find>
+      <find>p-footer clearfix</find>
+      <find>hospitalSwitch</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -94,6 +119,8 @@
       <replace>order_date</replace>
       <replace>ok_date</replace>
       <replace>created_at</replace>
+      <replace>,2,</replace>
+      <replace>patient_18</replace>
     </replaceStrings>
     <dirStrings>
       <dir>F:\wampserver\www\yy\app\Http\Controllers</dir>
@@ -105,57 +132,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/宋继飘/patient.edit.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/base.js" />
-        <option value="$USER_HOME$/Desktop/宋继飘/patient.op.php" />
-        <option value="$USER_HOME$/Desktop/cc/function.php" />
-        <option value="$USER_HOME$/Desktop/cc/hospital/hospital.edit.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/function.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/hospital/hospital.edit.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/index.tpl.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/import.html" />
-        <option value="$USER_HOME$/Desktop/cc/main.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/class.power.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_09_11_182311_create_swts_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/swt/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Swt.php" />
+        <option value="$USER_HOME$/Desktop/cc/dsis/rp.core.php" />
         <option value="$USER_HOME$/Desktop/cc/m/mediasis/media.core.php" />
-        <option value="$USER_HOME$/Desktop/cc/m/mediasis/media.condition_form.php" />
-        <option value="$USER_HOME$/Desktop/cc/arrive/arrive.core.php" />
-        <option value="$USER_HOME$/Desktop/cc/arrive/arrive.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/patient.list.tpl.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/main.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/patient.list.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/patient.search.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/character.do.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/report/rp_sex.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/report/rp_all.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/cost/cost_edit.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/cost/cost.php" />
+        <option value="$USER_HOME$/Desktop/cc/m/swtsis/swt.core.php" />
+        <option value="$USER_HOME$/Desktop/宋继飘/report/rp.core.php" />
+        <option value="$USER_HOME$/Desktop/宋继飘/report/rp_kf.php" />
+        <option value="$USER_HOME$/Desktop/宋继飘/report/rp.condition_form.php" />
+        <option value="$USER_HOME$/Desktop/cc/output_name.php" />
+        <option value="$USER_HOME$/Desktop/宋继飘/sys/character.php" />
+        <option value="$USER_HOME$/Desktop/志凯/templets/content_list.htm" />
+        <option value="$USER_HOME$/Desktop/cc/m/character.php" />
         <option value="$USER_HOME$/Desktop/cc/main.pm.bak.php" />
-        <option value="$USER_HOME$/Desktop/cc/m/mediasis/media.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/core.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$USER_HOME$/Desktop/cc/m/swtsis/swt.php" />
-        <option value="$USER_HOME$/Desktop/cc/main.a.php" />
-        <option value="$PROJECT_DIR$/app/Imports/SwtsImport.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/patient.list.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/patient.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/patient.op.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/patient.edit.php" />
-        <option value="$USER_HOME$/Desktop/cc/main.target.php" />
-        <option value="$USER_HOME$/Desktop/cc/patient.edit.php" />
+        <option value="$USER_HOME$/Desktop/cc/m/swtarea/area.condition_form.php" />
+        <option value="$USER_HOME$/Desktop/cc/m/swtarea/area.php" />
+        <option value="$USER_HOME$/Desktop/cc/main.y.php" />
+        <option value="$USER_HOME$/Desktop/cc/me.modifypass.php" />
+        <option value="$USER_HOME$/Desktop/cc/main.lay.php" />
+        <option value="$USER_HOME$/Desktop/cc/m/asis/area.php" />
+        <option value="$USER_HOME$/Desktop/4258225_gh.foshantyt.com_nginx/gh.php" />
+        <option value="$USER_HOME$/Desktop/cc/main.source.php" />
+        <option value="$USER_HOME$/Desktop/cc/main.php" />
+        <option value="$USER_HOME$/Desktop/cc/patient.list.tpl.php" />
         <option value="$USER_HOME$/Desktop/cc/patient.list.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/main.pm.bak.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/clue.list.tpl.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/api/clue.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/clue.list.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/clue.op.php" />
-        <option value="$USER_HOME$/Desktop/宋继飘/clues/clue.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AidenController.php" />
-        <option value="$PROJECT_DIR$/app/Aiden.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
+        <option value="$USER_HOME$/Desktop/cc/patient/patient.edit.php" />
+        <option value="$USER_HOME$/Desktop/cc/config2.php" />
+        <option value="$USER_HOME$/Desktop/cc/core2.php" />
+        <option value="$USER_HOME$/Desktop/cc/patient/patient_update.php" />
+        <option value="$USER_HOME$/Desktop/cc/index.tpl.php" />
+        <option value="$USER_HOME$/Desktop/cc/jdt.css" />
+        <option value="$USER_HOME$/Desktop/cc/patient/patient.list.php" />
+        <option value="$USER_HOME$/Desktop/cc/sys/admin.php" />
+        <option value="$USER_HOME$/Desktop/sys_admin.sql" />
+        <option value="$USER_HOME$/Desktop/sys_log.sql" />
+        <option value="$USER_HOME$/Desktop/patient_23.sql" />
+        <option value="$USER_HOME$/Desktop/patient_22.sql" />
+        <option value="$USER_HOME$/Desktop/patient_19.sql" />
+        <option value="$USER_HOME$/Desktop/patient_2.sql" />
+        <option value="$USER_HOME$/Desktop/吴丹/sys/target_edit.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/sys/target.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/config.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/sys/admin.do.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/sys/admin.edit.php" />
+        <option value="$USER_HOME$/Desktop/cc/main.yy.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/patient/patient.edit.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/patient/patient.view.php" />
+        <option value="$USER_HOME$/Desktop/吴丹/patient/patient.list.php" />
+        <option value="$PROJECT_DIR$/../sjpwww/templets/default/index.htm" />
+        <option value="$PROJECT_DIR$/../sjpwww/js/weixin.js" />
+        <option value="$USER_HOME$/Desktop/吴丹/main.php" />
+        <option value="$USER_HOME$/Desktop/sys_menu.sql" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
       </list>
     </option>
   </component>
@@ -266,11 +293,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1977" />
-    <option name="y" value="62" />
-    <option name="width" value="1852" />
-    <option name="height" value="1003" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="496" />
+    <option name="y" value="13" />
+    <option name="width" value="1936" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -278,6 +305,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,24 +335,45 @@
               <item name="yy" type="b2602c69:ProjectViewProjectNode" />
               <item name="yy" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Imports" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yy" type="b2602c69:ProjectViewProjectNode" />
               <item name="yy" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yy" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yy" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yy" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="swt" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/vendor/PHPExcel-1.8/PHPExcel-1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sjpwww/js/weixin.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -414,23 +463,51 @@
       <workItem from="1601023024525" duration="1384000" />
       <workItem from="1601081222169" duration="5275000" />
       <workItem from="1601165269091" duration="15032000" />
-      <workItem from="1601253150083" duration="13427000" />
+      <workItem from="1601253150083" duration="17132000" />
+      <workItem from="1601337538875" duration="26489000" />
+      <workItem from="1601423009648" duration="3046000" />
+      <workItem from="1601511709424" duration="470000" />
+      <workItem from="1601514461597" duration="2200000" />
+      <workItem from="1601769486133" duration="7639000" />
+      <workItem from="1601867529910" duration="2431000" />
+      <workItem from="1601947225170" duration="4446000" />
+      <workItem from="1602030008999" duration="6255000" />
+      <workItem from="1602115412457" duration="8586000" />
+      <workItem from="1602202772186" duration="3966000" />
+      <workItem from="1602213241758" duration="1061000" />
+      <workItem from="1602287753481" duration="857000" />
+      <workItem from="1602296959086" duration="850000" />
+      <workItem from="1602374614561" duration="4669000" />
+      <workItem from="1602463003896" duration="1768000" />
+      <workItem from="1602547462412" duration="6978000" />
+      <workItem from="1602634175217" duration="5653000" />
+      <workItem from="1602720169259" duration="3489000" />
+      <workItem from="1602806710750" duration="2495000" />
+      <workItem from="1603070224657" duration="8187000" />
+      <workItem from="1603152921852" duration="5205000" />
+      <workItem from="1603238180265" duration="2420000" />
+      <workItem from="1603325831144" duration="1784000" />
+      <workItem from="1603411970171" duration="11899000" />
+      <workItem from="1603498327838" duration="16434000" />
+      <workItem from="1603528216441" duration="246000" />
+      <workItem from="1603670969713" duration="58929000" />
+      <workItem from="1603843466370" duration="12146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="733048000" />
+    <option name="totallyTimeSpent" value="947351000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1977" y="62" width="1852" height="1003" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15066965" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14232409" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" weight="0.21566524" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" weight="0.12553649" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.3400853" side_tool="true" weight="0.40085745" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.3400853" side_tool="true" weight="0.40021458" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -440,32 +517,14 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="SOQL Query" order="12" />
+      <window_info anchor="bottom" id="Log Analyzer" order="13" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1655825" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.65991473" visible="true" weight="0.22178988" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.3400853" side_tool="true" weight="0.40085745" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.55734193" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.6008584" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -487,285 +546,38 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/cc/m/mediasis/media.condition_form.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/config.more.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="63">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/m/mediasis/media.core.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/config2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="378">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/report/rp_all.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/core2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        <state relative-caret-position="42">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/report/rp.condition_form.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/patient/patient_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="70" />
+        <state relative-caret-position="126">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/cost/cost.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/patient/patient.edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/report/rp_sex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="56" column="29" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/main.pm.bak.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="723" column="15" selection-start-line="723" selection-start-column="15" selection-end-line="723" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/m/mediasis/media.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="258" column="17" selection-start-line="258" selection-start-column="17" selection-end-line="258" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/api/cost_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3020" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/core/class.mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="137" column="20" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/core/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/arrive/arrive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/cost/cost_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#7#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/m/swtsis/swt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="190" column="118" selection-start-line="190" selection-start-column="118" selection-end-line="190" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="752" column="13" lean-forward="true" selection-start-line="752" selection-start-column="13" selection-end-line="752" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="290" column="17" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/main.a.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="276" column="116" selection-start-line="276" selection-start-column="116" selection-end-line="276" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.op.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.edit.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.view.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.search.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.list.tpl.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/patient.list.php" />
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.search.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/main.php" />
-    <entry file="file://$USER_HOME$/Desktop/cc/class.mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="315" column="24" selection-start-line="315" selection-start-column="13" selection-end-line="315" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/main.target.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
-          <folding>
-            <element signature="e#87#93#1" expanded="true" />
-            <element signature="e#81#87#1" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#16561#16567#0#HTML" expanded="true" />
-            <element signature="e#16624#16630#0#HTML" expanded="true" />
-            <element signature="e#16689#16695#0#HTML" expanded="true" />
-            <element signature="e#16891#16897#0#HTML" expanded="true" />
-            <element signature="e#17100#17106#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#25987#25993#0#HTML" expanded="true" />
-            <element signature="e#25993#25999#0#HTML" expanded="true" />
-            <element signature="e#26073#26079#1#HTML" expanded="true" />
-            <element signature="e#26190#26196#0#HTML" expanded="true" />
-            <element signature="e#26196#26202#0#HTML" expanded="true" />
-            <element signature="e#26306#26312#1#HTML" expanded="true" />
-            <element signature="e#26585#26591#0#HTML" expanded="true" />
-            <element signature="e#26591#26597#0#HTML" expanded="true" />
-            <element signature="e#26679#26685#1#HTML" expanded="true" />
-            <element signature="e#26808#26814#0#HTML" expanded="true" />
-            <element signature="e#26814#26820#0#HTML" expanded="true" />
-            <element signature="e#26932#26938#1#HTML" expanded="true" />
-            <element signature="e#27215#27221#0#HTML" expanded="true" />
-            <element signature="e#27221#27227#0#HTML" expanded="true" />
-            <element signature="e#27307#27313#1#HTML" expanded="true" />
-            <element signature="e#27433#27439#0#HTML" expanded="true" />
-            <element signature="e#27439#27445#0#HTML" expanded="true" />
-            <element signature="e#27555#27561#1#HTML" expanded="true" />
-            <element signature="e#27839#27845#0#HTML" expanded="true" />
-            <element signature="e#27845#27851#0#HTML" expanded="true" />
-            <element signature="e#27935#27941#1#HTML" expanded="true" />
-            <element signature="e#28067#28073#0#HTML" expanded="true" />
-            <element signature="e#28073#28079#0#HTML" expanded="true" />
-            <element signature="e#28193#28199#1#HTML" expanded="true" />
-            <element signature="e#28634#28640#0#HTML" expanded="true" />
-            <element signature="e#28640#28646#0#HTML" expanded="true" />
-            <element signature="e#28729#28735#1#HTML" expanded="true" />
-            <element signature="e#28860#28866#0#HTML" expanded="true" />
-            <element signature="e#28979#28985#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#7;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#7;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#29225#29231#0#HTML" expanded="true" />
-            <element signature="e#29231#29237#0#HTML" expanded="true" />
-            <element signature="e#29260#29266#0#HTML" expanded="true" />
-            <element signature="e#29266#29272#0#HTML" expanded="true" />
-            <element signature="e#29304#29310#0#HTML" expanded="true" />
-            <element signature="e#29310#29316#0#HTML" expanded="true" />
-            <element signature="e#29343#29349#0#HTML" expanded="true" />
-            <element signature="e#29349#29355#0#HTML" expanded="true" />
-            <element signature="e#29545#29551#0#HTML" expanded="true" />
-            <element signature="e#29551#29557#0#HTML" expanded="true" />
-            <element signature="e#29661#29667#1#HTML" expanded="true" />
-            <element signature="e#29792#29798#0#HTML" expanded="true" />
-            <element signature="e#29911#29917#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#5;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#7;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#8;n#tr#1;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#5;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#7;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#8;n#tr#2;n#tbody#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#122#129#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/patient.edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="863" lean-forward="true" selection-start-line="863" selection-end-line="863" />
+        <state relative-caret-position="197">
+          <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#71#77#1" expanded="true" />
@@ -781,10 +593,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/cc/patient.list.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/class.mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="808" column="86" lean-forward="true" selection-start-line="808" selection-start-column="86" selection-end-line="808" selection-end-column="86" />
+        <state relative-caret-position="336">
+          <caret line="181" column="88" lean-forward="true" selection-start-line="181" selection-start-column="78" selection-end-line="181" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/index.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/jdt.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/sys/admin.op.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1317">
+          <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/patient/patient.list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="806" column="43" lean-forward="true" selection-start-line="806" selection-start-column="43" selection-end-line="806" selection-end-column="43" />
           <folding>
             <element signature="e#17#23#1" expanded="true" />
             <element signature="e#41#47#1" expanded="true" />
@@ -798,11 +645,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/main.pm.bak.php">
+    <entry file="file://$USER_HOME$/Desktop/cc/sys/admin.list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="690" column="58" lean-forward="true" selection-start-line="690" selection-start-column="58" selection-end-line="690" selection-end-column="58" />
+        <state relative-caret-position="-441" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/sys/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="102" column="44" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
           <folding>
+            <element signature="e#2957#2963#0#HTML" expanded="true" />
+            <element signature="e#2963#2969#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3532#3538#0#HTML" expanded="true" />
+            <element signature="e#3538#3544#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8582#8588#0#HTML" expanded="true" />
+            <element signature="e#8588#8594#0#HTML" expanded="true" />
+            <element signature="e#8660#8666#0#HTML" expanded="true" />
+            <element signature="e#8723#8729#0#HTML" expanded="true" />
+            <element signature="e#8736#8742#0#HTML" expanded="true" />
+            <element signature="e#8742#8748#0#HTML" expanded="true" />
+            <element signature="e#8864#8870#0#HTML" expanded="true" />
+            <element signature="e#8947#8953#0#HTML" expanded="true" />
+            <element signature="e#9017#9023#0#HTML" expanded="true" />
+            <element signature="e#9081#9087#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#select#0;n#span#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9414#9420#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/sys_admin.sql" />
+    <entry file="file://$USER_HOME$/Desktop/count_type.sql" />
+    <entry file="file://$USER_HOME$/Desktop/depart.sql" />
+    <entry file="file://$USER_HOME$/Desktop/disease.sql" />
+    <entry file="file://$USER_HOME$/Desktop/doctor.sql" />
+    <entry file="file://$USER_HOME$/Desktop/engine.sql" />
+    <entry file="file://$USER_HOME$/Desktop/hospital.sql" />
+    <entry file="file://$USER_HOME$/Desktop/media.sql" />
+    <entry file="file://$USER_HOME$/Desktop/sys_log.sql" />
+    <entry file="file://$USER_HOME$/Desktop/patient_23.sql" />
+    <entry file="file://$USER_HOME$/Desktop/patient_22.sql" />
+    <entry file="file://$USER_HOME$/Desktop/patient_19.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/patient_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/sys/target_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/sys/target.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3612">
+          <caret line="172" column="6" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1617">
+          <caret line="80" column="54" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/class.power.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="55" column="95" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/sys/admin.do.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="131" column="5" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="131" selection-end-column="5" />
+          <folding>
+            <element signature="e#122#2970#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/sys/admin.edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="207" column="10" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#select#0;n#td#1;n#tr#2;n#table#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5755#5761#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/sys_character.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="62" selection-start-line="43" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/www.1111314.com/www.1111314.com/view.php_id=826">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/cc/main.yy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="506" column="30" selection-start-line="506" selection-start-column="30" selection-end-line="506" selection-end-column="30" />
+          <folding>
+            <element signature="e#2366#4387#0#PHP" />
+            <element signature="e#87#93#1" expanded="true" />
+            <element signature="e#81#87#1" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#div#0;n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
@@ -813,38 +796,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Imports/SwtsImport.php">
+    <entry file="file://$USER_HOME$/Desktop/吴丹/patient/patient.edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        <state relative-caret-position="684">
+          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
           <folding>
-            <element signature="e#31#43#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="78" column="7" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="78" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="217" column="60" lean-forward="true" selection-start-line="217" selection-start-column="60" selection-end-line="217" selection-end-column="60" />
-          <folding>
-            <element signature="e#44#50#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="356" column="1" lean-forward="true" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
-          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#11;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#71#77#1" expanded="true" />
             <element signature="e#71#77#1" expanded="true" />
@@ -859,82 +816,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.op.php">
+    <entry file="file://$USER_HOME$/Desktop/吴丹/patient/patient.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1719">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+        <state relative-caret-position="39">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/吴丹/patient/patient.list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="72" column="52" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="52" />
           <folding>
-            <element signature="e#8#32#0#PHP" expanded="true" />
+            <element signature="e#17#23#1" expanded="true" />
+            <element signature="e#41#47#1" expanded="true" />
+            <element signature="e#43#49#1" expanded="true" />
+            <element signature="e#100#106#1" expanded="true" />
+            <element signature="e#156#162#1" expanded="true" />
+            <element signature="e#88#94#1" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/patient.edit.php">
+    <entry file="file://$PROJECT_DIR$/../sjpwww/js/weixin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4222">
-          <caret line="60" column="50" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="60" selection-end-column="50" />
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/clues/clue.list.tpl.php">
+    <entry file="file://$USER_HOME$/Desktop/吴丹/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+        <state relative-caret-position="690">
+          <caret line="801" column="47" selection-start-line="801" selection-start-column="47" selection-end-line="801" selection-end-column="47" />
+          <folding>
+            <element signature="e#87#93#1" expanded="true" />
+            <element signature="e#81#87#1" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/宋继飘/api/clue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="221" selection-start-line="34" selection-start-column="221" selection-end-line="34" selection-end-column="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+    <entry file="file://$USER_HOME$/Desktop/sys_menu.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <caret line="50" selection-start-line="50" selection-end-line="53" selection-end-column="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+    <entry file="file://$PROJECT_DIR$/../sjpwww/templets/default - 副本/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sjpwww/templets/default/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="171" column="33" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
           <folding>
-            <element signature="e#35#51#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#10;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SwtController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-4427" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="221" column="94" lean-forward="true" selection-start-line="221" selection-start-column="94" selection-end-line="221" selection-end-column="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AidenController.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Hospital.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state relative-caret-position="-45">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Aiden.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HospitalController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="-801">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+        <state relative-caret-position="672">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
         </state>
       </provider>
     </entry>
