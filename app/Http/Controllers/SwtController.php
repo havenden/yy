@@ -118,6 +118,7 @@ class SwtController extends Controller
                 $filename=date('Y').'_'.date('m').'_'.date('d').'_'.date('H').'_'.date('i').'_'.date('s').'.'.$fileextension;
                 $path = $file->storeAs('uploadfiles',$filename);
                 ExcelImport::dispatch($path,Aiden::getActiveHospitalId(Auth::user()))->onConnection('database');
+//                ExcelImport::dispatchNow($path,Aiden::getActiveHospitalId(Auth::user()));
                 return redirect()->back()->with('success','文件上传成功，已进入任务队列，请稍后刷新！');
             }else{
                 return redirect()->back()->with('error','文件格式错误');
