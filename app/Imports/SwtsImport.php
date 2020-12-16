@@ -178,7 +178,7 @@ class SwtsImport implements ToModel,WithHeadingRow
         //对话类别 chat_type '转微信','转电话','预约','转QQ'
         $effective_chat_types=['转微信','转电话','预约','转QQ'];
         //客人类型 member_type
-        $uneffective_member_type=['无效-已就诊','无效咨询','掉线','广告否词','问候','重复咨询','生殖辅助','备孕3个月内'];
+        $uneffective_member_type=['无效-已就诊','无效咨询','掉线','广告否词','问候','重复咨询','当重复咨询','生殖辅助','备孕3个月内'];
         if (in_array($memberType,$uneffective_member_type)){
             $effective = 0;
         }else{
