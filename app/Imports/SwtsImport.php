@@ -25,34 +25,36 @@ class SwtsImport implements ToModel,WithHeadingRow
     public function model(array $row)
     {
         $chatPlat = 'kst';
-        if ($chatPlat=='swt' && isset($row['客人讯息数']) && $row['客人讯息数']>0 && $row['名称']!='测试'){
-//            $swtCount=DB::table('swts_'.$this->getSwtId())->where('sid', $row['编号'])->count();
-//            if ($swtCount==0||empty($swtCount)){
-            $swt= new Swt($this->getSwt());
-//            $swt->sid = $row['编号'] ?? '';
-            $swt->swt_id = trim($row['永久身份'],"'") ?? '';
-            $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
-            $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
-            $swt->authors = $row['参与接待客服'] ?? '';
-            $swt->msg_num = $row['客人讯息数'] ?? '';
-            $swt->member_type = $row['客人类别'] ?? '';
-            $swt->msg_type = $row['对话类型'] ?? '';
-            $swt->chat_type = $row['对话类别'] ?? '';
-            $swt->engine = (string)$row['访问来源'] ??  '';
-            $swt->engine_from = $this->getEngine($row['访问来源']);
-            $swt->addr = (string)$row['初次访问网址'] ??  '';
-            $swt->url = (string)$row['对话来源'] ??  '';
-            $swt->keyword = $this->clearText($row['关键词']);
-            $swt->area = $this->getArea($row['IP定位']) ?? '';
-            $swt->title = $row['名称'] ?? '';
-            $swt->os = $row['操作系统'] ?? '';
-            $swt->device = $this->getDevice($row['操作系统']) ?? '';
-            $swt->account = $this->getAccount($row['初次访问网址'],$row['对话来源']);
-            $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
-            $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
-            $swt->save();
-//            }
-        }elseif ($chatPlat=='kst' && isset($row['访客发送消息数']) && (int)$row['访客发送消息数']>0 && $row['访客名称']!='测试'){
+//        if ($chatPlat=='swt' && isset($row['客人讯息数']) && $row['客人讯息数']>0 && $row['名称']!='测试'){
+////            $swtCount=DB::table('swts_'.$this->getSwtId())->where('sid', $row['编号'])->count();
+////            if ($swtCount==0||empty($swtCount)){
+////            $swt->sid = $row['编号'] ?? '';
+//            $swt= new Swt($this->getSwt());
+//            $swt->swt_id = trim($row['永久身份'],"'") ?? '';
+//            $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
+//            $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
+//            $swt->authors = $row['参与接待客服'] ?? '';
+//            $swt->msg_num = $row['客人讯息数'] ?? '';
+//            $swt->member_type = $row['客人类别'] ?? '';
+//            $swt->msg_type = $row['对话类型'] ?? '';
+//            $swt->chat_type = $row['对话类别'] ?? '';
+//            $swt->engine = (string)$row['访问来源'] ??  '';
+//            $swt->engine_from = $this->getEngine($row['访问来源']);
+//            $swt->addr = (string)$row['初次访问网址'] ??  '';
+//            $swt->url = (string)$row['对话来源'] ??  '';
+//            $swt->keyword = $this->clearText($row['关键词']);
+//            $swt->area = $this->getArea($row['IP定位']) ?? '';
+//            $swt->title = $row['名称'] ?? '';
+//            $swt->os = $row['操作系统'] ?? '';
+//            $swt->device = $this->getDevice($row['操作系统']) ?? '';
+//            $swt->account = $this->getAccount($row['初次访问网址'],$row['对话来源']);
+//            $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
+//            $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
+//            $swt->save();
+////            }
+//        }
+//        elseif ($chatPlat=='kst' && isset($row['访客发送消息数']) && (int)$row['访客发送消息数']>0 && $row['访客名称']!='测试'){
+        if (isset($row['访客发送消息数']) && (int)$row['访客发送消息数']>0 && $row['访客名称']!='测试'){
             $swt= new Swt($this->getSwt());
             $swt->swt_id = trim($row['访客ID'],"'") ?? '';
             $swt->start_time = ($row['本次访问时间']?Carbon::parse($row['本次访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
@@ -90,9 +92,9 @@ class SwtsImport implements ToModel,WithHeadingRow
     {
         $agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
         if (in_array($device,$agents)){
-            return '移动设备';
+            return 'mobile';
         }else{
-            return '电脑';
+            return 'pc';
         }
     }
     /**
