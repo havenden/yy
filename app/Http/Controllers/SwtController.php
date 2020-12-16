@@ -220,7 +220,7 @@ class SwtController extends Controller
             $data['swt']['engine'] = $member->engine;
             $data['swt']['engine_from'] = $member->engine_from;
             $data['swt']['os'] = $member->os;
-            $data['swt']['device'] = $member->device=='mobile'?'移动':'PC';
+            $data['swt']['device'] = $member->device;
             $data['swt']['account'] = $member->account;
             $data['swt']['is_effective'] = $member->is_effective==1?'有效对话':'无效对话';
             $data['swt']['is_contact'] = $member->is_contact==1?'留联':'';

@@ -439,7 +439,7 @@
                             htmlcontent += '<tr><td class=\"text-nowrap\">访问来源</td><td  class=\"text-wrap\" style=\"word-break: break-all;\">'+data.swt.engine+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">来源</td><td>'+data.swt.engine_from+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">操作系统</td><td>'+data.swt.os+'</td></tr>';
-                            htmlcontent += '<tr><td class=\"text-nowrap\">移动PC</td><td>'+data.swt.device+'</td></tr>';
+                            htmlcontent += '<tr><td class=\"text-nowrap\">设备</td><td>'+data.swt.device+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">是否有效</td><td>'+data.swt.is_effective+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">是否留联</td><td>'+data.swt.is_contact+'</td></tr>';
                             htmlcontent += '<tr><td class=\"text-nowrap\">账户后缀</td><td>'+data.swt.account+'</td></tr></table></div>';
