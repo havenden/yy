@@ -76,7 +76,6 @@ class SwtsImport implements ToModel,WithHeadingRow
             $swt->account = $this->getAccount($row['本次最初访问网页'],$row['对话网址']);
             $swt->is_contact = $this->getContact(explode(',',$row['对话归类']));
             $swt->is_effective = $this->getEffective($row['客户类型'],$row['对话类型'],explode(',',$row['对话归类']));
-            dd($swt);
             $swt->save();
         }
     }
