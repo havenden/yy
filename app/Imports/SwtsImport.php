@@ -24,40 +24,63 @@ class SwtsImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        if (isset($row['客人讯息数'])&&$row['客人讯息数']>0&&$row['名称']!='测试'){
-            if (is_numeric($row['编号'])){
-                $swtCount=DB::table('swts_'.$this->getSwtId())->where('sid', $row['编号'])->count();
-                if ($swtCount==0||empty($swtCount)){
-                    $swt= new Swt($this->getSwt());
-                    $swt->sid = $row['编号'] ?? '';
-                    $swt->swt_id = trim($row['永久身份'],"'") ?? '';
-                    $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
-                    $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
-                    $swt->authors = $row['参与接待客服'] ?? '';
-                    $swt->msg_num = $row['客人讯息数'] ?? '';
-                    $swt->member_type = $row['客人类别'] ?? '';
-                    $swt->msg_type = $row['对话类型'] ?? '';
-                    $swt->chat_type = $row['对话类别'] ?? '';
-                    $swt->engine = (string)$row['访问来源'] ??  '';
-                    $swt->engine_from = $this->getEngine($row['访问来源']);
-                    $swt->addr = (string)$row['初次访问网址'] ??  '';
-                    $swt->url = (string)$row['对话来源'] ??  '';
-                    $swt->keyword = $this->clearText($row['关键词']);
-                    $swt->area = $this->getArea($row['IP定位']) ?? '';
-                    $swt->title = $row['名称'] ?? '';
-                    $swt->os = $row['操作系统'] ?? '';
-                    $swt->device = $this->getDevice($row['操作系统']) ?? '';
-                    $swt->account = $this->getAccount($row['初次访问网址'],$row['对话来源']);
-                    $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
-                    $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
-                    $swt->save();
-                }
-            }
+        $chatPlat = 'kst';
+        if ($chatPlat=='swt' && isset($row['客人讯息数']) && $row['客人讯息数']>0 && $row['名称']!='测试'){
+//            $swtCount=DB::table('swts_'.$this->getSwtId())->where('sid', $row['编号'])->count();
+//            if ($swtCount==0||empty($swtCount)){
+            $swt= new Swt($this->getSwt());
+//            $swt->sid = $row['编号'] ?? '';
+            $swt->swt_id = trim($row['永久身份'],"'") ?? '';
+            $swt->start_time = ($row['开始访问时间']?Carbon::parse($row['开始访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
+            $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
+            $swt->authors = $row['参与接待客服'] ?? '';
+            $swt->msg_num = $row['客人讯息数'] ?? '';
+            $swt->member_type = $row['客人类别'] ?? '';
+            $swt->msg_type = $row['对话类型'] ?? '';
+            $swt->chat_type = $row['对话类别'] ?? '';
+            $swt->engine = (string)$row['访问来源'] ??  '';
+            $swt->engine_from = $this->getEngine($row['访问来源']);
+            $swt->addr = (string)$row['初次访问网址'] ??  '';
+            $swt->url = (string)$row['对话来源'] ??  '';
+            $swt->keyword = $this->clearText($row['关键词']);
+            $swt->area = $this->getArea($row['IP定位']) ?? '';
+            $swt->title = $row['名称'] ?? '';
+            $swt->os = $row['操作系统'] ?? '';
+            $swt->device = $this->getDevice($row['操作系统']) ?? '';
+            $swt->account = $this->getAccount($row['初次访问网址'],$row['对话来源']);
+            $swt->is_contact = $this->getContact(explode(',',$row['对话类别']));
+            $swt->is_effective = $this->getEffective($row['客人类别'],$row['对话类型'],explode(',',$row['对话类别']));
+            $swt->save();
+//            }
+        }elseif ($chatPlat=='kst' && isset($row['访客发送消息数']) && (int)$row['访客发送消息数']>0 && $row['访客名称']!='测试'){
+            $swt= new Swt($this->getSwt());
+            $swt->swt_id = trim($row['访客ID'],"'") ?? '';
+            $swt->start_time = ($row['本次访问时间']?Carbon::parse($row['本次访问时间'])->toDateTimeString():'') ?? ($row['开始对话时间']?Carbon::parse($row['开始对话时间'])->toDateTimeString():'')?? '';
+            $swt->author = (!empty($row['初始接待客服'])?$row['初始接待客服']:'无') ?? '';
+            $swt->authors = $row['参与接待客服'] ?? '';
+            $swt->msg_num = (int)$row['访客发送消息数'] ?? '';
+            $swt->member_type = $row['客户类型'] ?? '';
+            $swt->msg_type = $row['对话类型'] ?? '';
+            $swt->chat_type = $row['对话归类'] ?? '';
+            $swt->engine = (string)$row['来源网页'] ??  '';
+            $swt->engine_from = $this->getEngine($row['来源网页']);
+            $swt->addr = (string)$row['本次最初访问网页'] ??  '';
+            $swt->url = (string)$row['对话网址'] ??  '';
+            $swt->keyword = $this->clearText($row['关键词']);
+            $swt->area = $this->getArea($row['来源省市']) ?? '';
+            $swt->title = $row['访客名称'] ?? '';
+            $swt->os = $row['操作系统'] ?? '';
+            $swt->device = $row['终端类型'] ?? '';
+            $swt->account = $this->getAccount($row['本次最初访问网页'],$row['对话网址']);
+            $swt->is_contact = $this->getContact(explode(',',$row['对话归类']));
+            $swt->is_effective = $this->getEffective($row['客户类型'],$row['对话类型'],explode(',',$row['对话归类']));
+            $swt->save();
         }
     }
     public function headingRow(): int
     {
-        return 3;
+//        return 3;//商务通
+        return 1;//快商通
     }
     public function getSwt(){
         return ['hid'=>$this->hid];
@@ -67,9 +90,9 @@ class SwtsImport implements ToModel,WithHeadingRow
     {
         $agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
         if (in_array($device,$agents)){
-            return 'mobile';
+            return '移动设备';
         }else{
-            return 'pc';
+            return '电脑';
         }
     }
     /**
@@ -186,6 +209,7 @@ class SwtsImport implements ToModel,WithHeadingRow
         }else{
             if (strpos($area,'襄樊')) {$rea = '襄阳';}
             elseif ($area=='湖北省'){$rea = '武汉';}
+            elseif ($area=='湖北'){$rea = '武汉';}
             elseif (strpos($area,'亚太地区')!==false){$rea = '武汉';}
             else{$rea = '外省';}
         }

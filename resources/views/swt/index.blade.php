@@ -73,7 +73,7 @@
                         <th style="">IP定位</th>
 {{--                        <th style="">永久身份</th>--}}
                         <th style="">渠道来源</th>
-                        <th style="">移动PC</th>
+                        <th style="">设备</th>
                         <th style="">是否有效</th>
                         <th style="">是否留联</th>
                         <th style="">账户后缀</th>
@@ -95,7 +95,7 @@
                                 <td>{{ $swt->area }}</td>
 {{--                                <td>{{ $swt->swt_id }}</td>--}}
                                 <td >{{ $swt->engine_from }}</td>
-                                <td >{{ $swt->device=='mobile'?'移动':'PC' }}</td>
+                                <td >{{ $swt->device }}</td>
                                 <td><span class="{{  $swt->is_effective==1?'text-blue':'' }}">{{ $swt->is_effective==1?"有效对话":'无效对话' }}</span></td>
                                 <td><span class="{{  $swt->is_contact==1?'text-blue':'' }}">{{ $swt->is_contact==1?"留联":'' }}</span></td>
                                 <td>{{ $swt->account }}</td>
