@@ -74,8 +74,8 @@ class ApiController extends Controller
             if (Schema::hasTable($table)){
 //                $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->count();
 //                $swtDevice=DB::table($table)->select(DB::raw('count(device) as c, device'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->groupBy('device')->pluck('c','device')->toArray();
-                $swtMobile=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1],['device','mobile']])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
-                $swtPc=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1],['device','pc']])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
+                $swtMobile=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->whereIn('device', ['mobile', '手机'])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
+                $swtPc=DB::table($table)->select(DB::raw('count(engine_from) as e, engine_from'))->where([['start_time','>=',$start], ['start_time','<=',$end],['is_effective',1]])->whereIn('device', ['pc', '电脑'])->groupBy('engine_from')->pluck('e','engine_from')->toArray();
                 $body['count']=0;
                 $body['device']=[
                     'mobile'=>['count'=>0,'media'=>[]],

@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e9c538-9edd-4dfa-887b-45b88f8377bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SwtController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,52 +39,6 @@
         <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>if</find>
-      <find>update</find>
-      <find>add_yy</find>
-      <find>time_type</find>
-      <find>hos</find>
-      <find>targetTitle</find>
-      <find>ag</find>
-      <find>show</find>
-      <find>改约次数</find>
-      <find>arrivedays</find>
-      <find>sqlwhere</find>
-      <find>余亚丽</find>
-      <find>, `chengjiao`, `cj_sum`, `re_arrive`, `re_arrive_log`</find>
-      <find>, NULL, NULL, 0, NULL</find>
-      <find>`pid`,</find>
-      <find>, 0, 2,</find>
-      <find>patient_2</find>
-      <find>总到诊</find>
-      <find>hospital_ids</find>
-      <find>table</find>
-      <find>sys_admin</find>
-      <find>line</find>
-      <find>character_id</find>
-      <find>ch_data</find>
-      <find>qq</find>
-      <find>PBT96458070</find>
-      <find>kc5959</find>
-      <find>p-footer clearfix</find>
-      <find>hospitalSwitch</find>
-      <find>name</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>(</replace>
-      <replace>order_date</replace>
-      <replace>ok_date</replace>
-      <replace>created_at</replace>
-      <replace>,2,</replace>
-      <replace>patient_18</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>F:\wampserver\www\yy\app\Http\Controllers</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,6 +157,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -315,7 +271,14 @@
       <workItem from="1603843466370" duration="13351000" />
       <workItem from="1603870615517" duration="3387000" />
       <workItem from="1603929720214" duration="2106000" />
-      <workItem from="1608079349308" duration="7826000" />
+      <workItem from="1608079349308" duration="8441000" />
+      <workItem from="1608511064975" duration="2298000" />
+      <workItem from="1608691112805" duration="4867000" />
+      <workItem from="1608794810510" duration="5486000" />
+      <workItem from="1610334197571" duration="2512000" />
+      <workItem from="1610418818391" duration="6462000" />
+      <workItem from="1610602736613" duration="4355000" />
+      <workItem from="1610848054799" duration="850000" />
     </task>
     <servers />
   </component>
@@ -332,6 +295,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1610672327575">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1610672327575" />
+    <state x="767" y="263" key="search.everywhere.popup" timestamp="1610672335882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="263" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610672335882" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

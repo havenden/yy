@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$USER_HOME$/Desktop/area.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/area.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/arrive/area.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/arrive/arrive.condition_form.php" charset="GBK" />
@@ -78,6 +81,14 @@
     <file url="file://$USER_HOME$/Desktop/cc/target.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target_edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/w_list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/main.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/main.pm.bak.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/mainm.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/media.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.edit.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.view.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/rp.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/class.power.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/config.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/core.php" charset="GBK" />
