@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$USER_HOME$/Desktop/aquanxian.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/area.condition_form.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/area.core.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/area.php" charset="GBK" />
@@ -81,14 +82,42 @@
     <file url="file://$USER_HOME$/Desktop/cc/target.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/target_edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/cc/w_list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/config.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/function.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/gh/index.html" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/guahao.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/guahao_config.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/guahao_view.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/hf.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/hf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/hfl.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/hfl.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/main.d.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/main.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/main.pm.bak.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/mainm.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/media.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/output.php" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Desktop/output_name.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/patient.edit.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/patient.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.list.tpl.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.op.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/patient.search.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/patient.view.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/rp.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/swt.condition_form.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/swt.core.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/swt.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/tz_pcgb2312.js" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/whf.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/whf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/yhf.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/yhf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/zhf.list.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/zhf.php" charset="GBK" />
+    <file url="file://$USER_HOME$/Desktop/zxtrans.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/class.power.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/config.php" charset="GBK" />
     <file url="file://$USER_HOME$/Desktop/吴丹/core.php" charset="GBK" />
