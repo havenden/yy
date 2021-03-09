@@ -125,4 +125,73 @@ class ApiController extends Controller
         ];
         return json_encode($data);
     }
+
+    /**
+     * 商务通有效对话分析-咨询转化
+     */
+    public function zxTrans(Request $request)
+    {
+        $status=0;
+        $body=[];
+        $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
+        $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
+        $hid=intval($request->input('hid'));
+        if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
+            $table='swts_'.$hid;
+            if (Schema::hasTable($table)){
+                //对话数量
+                $swtCount=DB::table($table)->where([['start_time','>=',$start], ['start_time','<=',$end]])->count();
+                //有效对话
+                $swtEffectiveCount=DB::table($table)->where([
+                    ['start_time','>=',$start], ['start_time','<=',$end]
+                ])->whereIn('msg_type',['较好对话','极佳对话'])->count();
+                //一句话
+                $swtOneCount=DB::table($table)->where([
+                    ['start_time','>=',$start], ['start_time','<=',$end]
+                ])->whereIn('msg_type',['一般对话','其他有效对话'])->count();
+
+                $swtsArray=DB::table($table)->select(DB::raw('count(author) as c, author'))->where([
+                    ['start_time','>=',$start], ['start_time','<=',$end]
+                ])->groupBy('author')->pluck('c','author')->toArray();
+                $body['all']=$swtCount;
+                $body['effective']=$swtEffectiveCount;
+                $body['one']=$swtOneCount;
+                //有效对话率
+                $body['effective_percent']=$swtCount>0?sprintf('%.2f',($swtEffectiveCount/$swtCount)*100).'%':0;
+                //一句话占比
+                $body['one_percent']=$swtCount>0?sprintf('%.2f',($swtOneCount/$swtCount)*100).'%':0;
+                //总套联
+                $body['contact']=DB::table($table)->where([
+                    ['start_time','>=',$start], ['start_time','<=',$end],['is_contact',1]
+                ])->count();
+                //套联率
+                $body['contact_percent']=$swtCount>0?sprintf('%.2f',($body['contact']/$swtCount)*100).'%':0;
+                foreach ($swtsArray as $me=>$num){
+                    $me_all=$num;
+                    //有效对话
+                    $me_effective=DB::table($table)->where([['author','=',$me],['start_time','>=',$start], ['start_time','<=',$end]])->whereIn('msg_type',['较好对话','极佳对话'])->count();
+                    //一句话
+                    $me_one=DB::table($table)->where([['author','=',$me],['start_time','>=',$start], ['start_time','<=',$end]])->whereIn('msg_type',['一般对话','其他有效对话'])->count();
+                    //套联
+                    $me_contact = DB::table($table)->where([['author','=',$me],['start_time','>=',$start], ['start_time','<=',$end],['is_contact',1]])->count();
+                    $body['authors'][$me]['all']=$me_all;//数量
+                    $body['authors'][$me]['effective']=$me_effective;
+                    $body['authors'][$me]['one']=$me_one;
+                    $body['authors'][$me]['contact']=$me_contact;
+                    //有效对话率
+                    $body['authors'][$me]['effective_percent']=$me_all>0?sprintf('%.2f',($me_effective/$me_all)*100).'%':0;
+                    //一句话占比
+                    $body['authors'][$me]['one_percent']=$me_all>0?sprintf('%.2f',($me_one/$me_all)*100).'%':0;
+                    //套联率
+                    $body['authors'][$me]['contact_percent']=$me_all>0?sprintf('%.2f',($me_contact/$me_all)*100).'%':0;
+                }
+                $status=1;
+            }
+        }
+        $data=[
+            'status'=>$status,
+            'body'=>$body,
+        ];
+        return json_encode($data);
+    }
 }
