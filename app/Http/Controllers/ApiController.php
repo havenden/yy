@@ -138,7 +138,7 @@ class ApiController extends Controller
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
         $authorInput = $request->input('author');
-        $authorInput = $author=iconv("GBK","UTF-8",$authorInput);
+        $authorInput = iconv("GBK","UTF-8",$authorInput);
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
