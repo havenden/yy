@@ -198,8 +198,7 @@ class ApiController extends Controller
         if (isset($authorInput)&&!empty($authorInput)){
             $data=[
                 'status'=>$status,
-                'name'=>$authorInput,
-                'body'=>$body['authors'],
+                'body'=>$body['authors'][$authorInput],
              ];
         }else{
             $data=[
