@@ -136,6 +136,7 @@ class ApiController extends Controller
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
+        $authorInput = $request->input('author');
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
@@ -144,11 +145,11 @@ class ApiController extends Controller
                 //有效对话
                 $swtEffectiveCount=DB::table($table)->where([
                     ['start_time','>=',$start], ['start_time','<=',$end]
-                ])->whereIn('msg_type',['较好对话','极佳对话'])->count();
+                ])->whereIn('msg_type',['较好对话','极佳对话','一般对话'])->count();
                 //一句话
                 $swtOneCount=DB::table($table)->where([
                     ['start_time','>=',$start], ['start_time','<=',$end]
-                ])->whereIn('msg_type',['一般对话','其他有效对话'])->count();
+                ])->whereIn('msg_type',['其他有效对话'])->count();
 
                 $swtsArray=DB::table($table)->select(DB::raw('count(author) as c, author'))->where([
                     ['start_time','>=',$start], ['start_time','<=',$end]
@@ -188,10 +189,18 @@ class ApiController extends Controller
                 $status=1;
             }
         }
-        $data=[
-            'status'=>$status,
-            'body'=>$body,
-        ];
+        if (isset($authorInput)&&isset($body['authors'][$authorInput]){
+            $data=[
+                'status'=>$status,
+                'body'=>$body['authors'][$authorInput],
+             ];
+        }else{
+            $data=[
+                'status'=>$status,
+                'body'=>$body,
+             ];
+        }
         return json_encode($data);
     }
+
 }
