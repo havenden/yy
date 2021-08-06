@@ -139,7 +139,7 @@ class ApiController extends Controller
         $hid=intval($request->input('hid'));
         $authorInput = $request->input('author');
         if(isset($authorInput)){
-            $encode = mb_detect_encoding($str, array("ASCII",'UTF-8',"GB2312","GBK"));
+            $encode = mb_detect_encoding($authorInput, array("ASCII",'UTF-8',"GB2312","GBK"));
             return $encode;
 //             $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
         }
