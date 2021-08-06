@@ -137,10 +137,9 @@ class ApiController extends Controller
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
-        $authorInputg = $request->input('author');
-        $authorInput = '';
-//         $authorInput = iconv("GBK","UTF-8",$authorInput);
-        for ($i=0;$i<strlen($authorInputg);$i++) {$authorInput.=sprintf("%%%02X",ord(substr($authorInputg,$i,1)));}
+        $authorInput = $request->input('author');
+        $encode = mb_detect_encoding($str, array("ASCII",'UTF-8',"GB2312","GBK"));
+        $authorInput = mb_convert_encoding($authorInput, "UTF-8", $encode);
 　　　
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
