@@ -138,11 +138,11 @@ class ApiController extends Controller
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
         $authorInput = $request->input('author');
-        if(!empty($authorInput)){
-            $encode = mb_detect_encoding($str,array("ASCII",'UTF-8',"GB2312","GBK"));
-            $authorInput = mb_convert_encoding($authorInput, "UTF-8", $encode);
-            return $authorInput;
-        }
+//         if(!empty($authorInput)){
+//             $encode = mb_detect_encoding($str,array("ASCII",'UTF-8',"GB2312","GBK"));
+//             $authorInput = mb_convert_encoding($authorInput, "UTF-8", $encode);
+//             return $authorInput;
+//         }
 
 　　　
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
