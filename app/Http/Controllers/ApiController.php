@@ -140,7 +140,8 @@ class ApiController extends Controller
         $authorInput = $request->input('author');
         if(isset($authorInput)){
             $encode = mb_detect_encoding($str, array("ASCII",'UTF-8',"GB2312","GBK"));
-            $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
+            return $encode;
+//             $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
         }
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
