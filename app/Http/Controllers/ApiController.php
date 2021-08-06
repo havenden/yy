@@ -131,13 +131,14 @@ class ApiController extends Controller
      */
     public function zxTrans(Request $request)
     {
-        header('Access-Control-Allow-Origin:*'); 
+        header('Access-Control-Allow-Origin:*');
         $status=0;
         $body=[];
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
         $authorInput = $request->input('author');
+        $authorInput = $author=iconv(,"GBK""UTF-8",$authorInput);
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
