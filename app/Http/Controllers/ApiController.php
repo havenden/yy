@@ -138,11 +138,11 @@ class ApiController extends Controller
         $end=$request->input('etime')?Carbon::parse($request->input('etime'))->endOfDay()->toDateTimeString():Carbon::now()->toDateTimeString();
         $hid=intval($request->input('hid'));
         $authorInput = $request->input('author');
-        if(isset($authorInput)){
-            $encode = mb_detect_encoding($authorInput, array("ASCII",'UTF-8',"GB2312","GBK"));
-            return $encode+'---'+$authorInput+':'+mb_convert_encoding($authorInput, 'UTF-8', $encode);
-//             $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
-        }
+//         if(isset($authorInput)){
+//             $encode = mb_detect_encoding($authorInput, array("ASCII",'UTF-8',"GB2312","GBK"));
+//             return $encode+'---'+$authorInput+':'+mb_convert_encoding($authorInput, 'UTF-8', $encode);
+// //             $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
+//         }
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
             $table='swts_'.$hid;
             if (Schema::hasTable($table)){
@@ -198,7 +198,7 @@ class ApiController extends Controller
         if (isset($authorInput)&&!empty($authorInput)){
             $data=[
                 'status'=>$status,
-                'body'=>$body['authors'][$authorInput],
+                'body'=>$body['authors'],
              ];
         }else{
             $data=[
