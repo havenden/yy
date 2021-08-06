@@ -131,6 +131,7 @@ class ApiController extends Controller
      */
     public function zxTrans(Request $request)
     {
+        header('Access-Control-Allow-Origin:*'); 
         $status=0;
         $body=[];
         $start=$request->input('btime')?Carbon::parse($request->input('btime'))->startOfDay()->toDateTimeString():Carbon::now()->startOfMonth()->toDateTimeString();
