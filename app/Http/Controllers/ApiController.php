@@ -189,8 +189,7 @@ class ApiController extends Controller
                 $status=1;
             }
         }
-        if (!empty($authorInput)&&isset($body['authors'][$authorInput])){
-
+        if (isset($authorInput)&&!empty($authorInput)){
             $data=[
                 'status'=>$status,
                 'body'=>$body['authors'][$authorInput],
