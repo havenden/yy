@@ -140,7 +140,7 @@ class ApiController extends Controller
         $authorInput = $request->input('author');
         if(isset($authorInput)){
             $encode = mb_detect_encoding($authorInput, array("ASCII",'UTF-8',"GB2312","GBK"));
-            return $encode;
+            return $encode+'---'+$authorInput+':'+mb_convert_encoding($authorInput, 'UTF-8', $encode);
 //             $authorInput = mb_convert_encoding($authorInput, 'UTF-8', $encode);
         }
         if (isset($hid)&&$hid>0&&Aiden::isActiveDomain($request)){
